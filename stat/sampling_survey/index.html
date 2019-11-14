@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/r_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Survey Sampling: Animated Statistics Using R -- Yihui XIE</title>
+<script language="JavaScript" type="text/javascript" src="../../fun.js"></script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../css.css" rel="stylesheet" type="text/css" />
+<link href="../../r.css" rel="stylesheet" type="text/css" />
+<link href="../../favicon.ico" rel="shortcut icon" />
+<script language="JavaScript" type="text/javascript" src="../../fun.js"></script>
+<meta name="Keywords" content="animations, statistics, R, Yihui Xie, R Graphics, grid graphics, Theory of Probability, Mathematical Statistics, Linear Models, Nonparametric Statistics, Time Series, Multivariate Statistics, Numerical Optimization, Data Mining, Machine Learning" />
+<meta name="Description" content="Animated Statistics Using R: a web site for animations in the illustration of statistical theories, methods and applications. (by Yihui XIE)" />
+<meta name="Author" content="Yihui XIE" />
+</head>
+
+<body>
+<!-- InstanceBeginRepeat name="header" --><!-- InstanceBeginRepeatEntry -->
+<div id="header">
+<div id="logo"><img src="../../images/banner.png" width="600" height="100" align="left" />
+<pre class="hl" style="margin: 0px; border: none; padding: 0px; background-color: #FFF8DC"><span class="hl kwa">for</span> <span class="hl sym">(</span>i <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl sym">:</span><span class="hl num">360</span><span class="hl sym">) {</span>
+    <span class="hl kwc">plot</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> ann <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">,</span> type <span class="hl sym">=</span> <span class="hl str">&quot;n&quot;</span><span class="hl sym">,</span> axes <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">)</span>
+    <span class="hl kwc">text</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> <span class="hl num">1</span><span class="hl sym">,</span> <span class="hl str">&quot;Animation&quot;</span><span class="hl sym">,</span> srt <span class="hl sym">=</span> i<span class="hl sym">,</span> <span class="hl kwc">col</span> <span class="hl sym">=</span>
+        <span class="hl kwc">rainbow</span><span class="hl sym">(</span><span class="hl num">360</span><span class="hl sym">)[</span>i<span class="hl sym">],</span> cex <span class="hl sym">=</span> <span class="hl num">7</span> <span class="hl sym">*</span> i<span class="hl sym">/</span><span class="hl num">360</span><span class="hl sym">)</span>
+    <span class="hl kwc">Sys.sleep</span><span class="hl sym">(</span><span class="hl num">0.01</span><span class="hl sym">)}</span>
+</pre></div>
+</div>
+<div id="title">Animated Statistics Using R <font color="#FF0000">(to be moved to <a href="http://animation.yihui.name" title="http://animation.yihui.name" target="_blank">AniWiki</a>!)</font> </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<div id="mainwrap">
+<div id="wrapper">
+<!-- InstanceBeginRepeat name="navigation" --><!-- InstanceBeginRepeatEntry -->
+  <div id="nav" >
+    <ul>
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../news/">What's New</a> </li>
+      <li><a href="../../intro/">Introduction to R</a>
+        <ul>
+          <li><a href="../../intro/install/">Installation</a></li>
+            <li><a href="../../intro/documentations/">Documentations</a></li>
+          </ul>
+      </li>
+      <li><a href="../../gr/">R Graphics
+        </a>
+        <ul>
+          <li><a href="../../gr/elements/">Elements</a></li>
+          <li><a href="../../gr/graphics/">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">graphics</font></a></li>
+          <li><a href="../../gr/animation/" title="Introduction to the package 'animation'">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">animation</font></a> </li>
+          </ul>
+      </li>
+      <li><a href="../">Animated Statistics
+        </a>
+        <ul>
+          <li><a href="../probability/">Theory of Probability</a></li>
+          <li><a href="./">Sampling Survey</a> </li>
+          <li>Mathematical Stat.</li>
+          <li>Linear Models</li>
+          <li>Nonparametric Stat.</li>
+          <li>Time Series Analysis </li>
+          <li><a href="../multivariate_stat/">Multivariate Stat.</a></li>
+          <li><a href="../computational_stat/">Computational Stat.</a> </li>
+          <li>Data Mining</li>
+          <li><a href="../machine_learning/">Machine Learning</a> </li>
+        </ul>
+      </li>
+      <li><a href="../../misc/">Miscellanea
+        </a>
+        <ul>
+          <li><a href="../../misc/gif_pdf_grDev.htm" title="Different file formats that can be probably used in animations">Animation Tricks</a></li>
+          <li><a href="../../misc/java.htm" title="How to make better animations using JavaScript">JavaScript Details</a> </li>
+          <li><a href="../../misc/highlight.htm" title="Highlight R code using software &quot;Highlight&quot; by Andre Simon">Highlight R Code</a></li>
+          <li><a href="../../misc/ideas.htm">Ideas</a> </li>
+          <li><a href="../../misc/credits.htm">Credits</a></li>
+          <li><a href="../../news/feed.xml">RSS Feed</a> </li>
+        </ul>
+      </li>
+      </ul>
+  </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+
+<!-- InstanceBeginEditable name="body" -->
+<div id="main">
+<div id="maintitle">To see a World in a Grain of Sand; And a Heaven in a Wild Flower; ...</div>
+<fieldset>
+<legend>Table of Contents </legend>
+<div id="toc">
+  
+<ol>
+    <li><img src="images/srswor.png" align="right" />Simple Random Sampling
+      <ol>
+        <li><a href="simple_random/">Illustration for Simple Random Sampling</a></li>
+        <li>Central Limit Theorem in Statistical Inference </li>
+      </ol>
+    </li>
+    <li><a href="stratified/">Stratified Sampling</a></li>
+    <li><a href="cluster/">Cluster Sampling</a></li>
+    <li><a href="systematic/">Systematic Sampling</a> </li>
+    <li>Other Sampling Methods
+      <ol>
+        <li>Quota Sampling</li>
+        <li>Convenience Sampling</li>
+        <li>Matched Random Sampling </li>
+      </ol>
+    </li>
+    </ol>
+</div>
+</fieldset>
+<fieldset>
+<legend>Some Notes </legend>
+<p>Acutally I only want to demonstrate the four basic sampling methods here, namely &quot;Simple Random Sampling Without Replacement&quot; (SRSWOR), &quot;Stratified Sampling&quot;, &quot;Cluster Sampling&quot;, and &quot;Systematic Sampling&quot;; as for other methods such as quota sampling, I don't intend to give any illustrations here because there isn't much sense of randomness.</p>
+<p>In the following animations, I'll use 100 points as the population and draw samples from them using the four differenct methods. Colored rectangles mean &quot;strata&quot; or &quot;clusters&quot;. I'll mark those points which are picked out by my program with big red circles. </p>
+<p>As we all know, the <em>Central Limit Theorem</em> plays an important role in the statistical inference in survey sampling. However, I find most Chinese textbooks on survey sampling are rather misleading on the interpretation of Central Limit Theorem, thus I use another section to give some simulations. </p>
+<p>All of these functions can be found in the R package <span class="mono">animation</span> with names like <em>sample.***()</em>, e.g. <a href="http://finzi.psych.upenn.edu/R/library/animation/html/sample.simple.html" target="_blank"><em>sample.simple()</em></a>. </p>
+<p>For more knowledge on sampling techniques, please refer to those specific books such as:</p>
+<ul><li>Cochran, W G (1977) <em>Sampling Techniques</em>, Wiley, <a dragover="true" href="http://en.wikipedia.org/w/index.php?title=Special:Booksources&amp;isbn=047116240X">ISBN 0-471-16240-X</a> </li>
+  <li>Kish, L (1995) <em>Survey Sampling</em>, Wiley, <a href="http://en.wikipedia.org/w/index.php?title=Special:Booksources&amp;isbn=0471109495">ISBN 0-471-10949-5</a></li>
+  <li>...</li>
+</ul>
+</fieldset>
+</div>
+<!-- InstanceEndEditable --></div></div>
+<!-- InstanceBeginRepeat name="footer" --><!-- InstanceBeginRepeatEntry -->
+<div id=footwrap>
+<div id="footer">Copyright &copy;  2007 by <a href="http://www.yihui.name/cv/" target="_blank">Yihui XIE</a> from Beijing, China.
+      Created on Oct 6, 2007; Last updated on 
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+
+var m_names = new Array("Jan", "Feb", "Mar", 
+"Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+"Oct", "Nov", "Dec");
+
+var d = new Date(document.lastModified);
+var curr_date = d.getDate();
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+document.write(m_names[curr_month] + " " + curr_date + ", " + curr_year);
+
+//-->
+</SCRIPT>
+<br />
+Recommended resolution: 1280*1024; Web browser: Firefox; <a href="http://www.yihui.name/en/guestbook.php" title="Leave a message to me in my guestbook" target="_blank">Feedbacks</a> are most welcome. </div>
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+</body>
+<!-- InstanceEnd --></html>

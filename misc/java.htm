@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/r_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>JavaScript Details in Animations: Animated Statistics Using R -- Yihui XIE</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../css.css" rel="stylesheet" type="text/css" />
+<link href="../r.css" rel="stylesheet" type="text/css" />
+<link href="../favicon.ico" rel="shortcut icon" />
+<script language="JavaScript" type="text/javascript" src="../fun.js"></script>
+<meta name="Keywords" content="animations, statistics, R, Yihui Xie, R Graphics, grid graphics, Theory of Probability, Mathematical Statistics, Linear Models, Nonparametric Statistics, Time Series, Multivariate Statistics, Numerical Optimization, Data Mining, Machine Learning" />
+<meta name="Description" content="Animated Statistics Using R: a web site for animations in the illustration of statistical theories, methods and applications. (by Yihui XIE)" />
+<meta name="Author" content="Yihui XIE" />
+</head>
+
+<body>
+<!-- InstanceBeginRepeat name="header" --><!-- InstanceBeginRepeatEntry -->
+<div id="header">
+<div id="logo"><img src="../images/banner.png" width="600" height="100" align="left" />
+<pre class="hl" style="margin: 0px; border: none; padding: 0px; background-color: #FFF8DC"><span class="hl kwa">for</span> <span class="hl sym">(</span>i <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl sym">:</span><span class="hl num">360</span><span class="hl sym">) {</span>
+    <span class="hl kwc">plot</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> ann <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">,</span> type <span class="hl sym">=</span> <span class="hl str">&quot;n&quot;</span><span class="hl sym">,</span> axes <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">)</span>
+    <span class="hl kwc">text</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> <span class="hl num">1</span><span class="hl sym">,</span> <span class="hl str">&quot;Animation&quot;</span><span class="hl sym">,</span> srt <span class="hl sym">=</span> i<span class="hl sym">,</span> <span class="hl kwc">col</span> <span class="hl sym">=</span>
+        <span class="hl kwc">rainbow</span><span class="hl sym">(</span><span class="hl num">360</span><span class="hl sym">)[</span>i<span class="hl sym">],</span> cex <span class="hl sym">=</span> <span class="hl num">7</span> <span class="hl sym">*</span> i<span class="hl sym">/</span><span class="hl num">360</span><span class="hl sym">)</span>
+    <span class="hl kwc">Sys.sleep</span><span class="hl sym">(</span><span class="hl num">0.01</span><span class="hl sym">)}</span>
+</pre></div>
+</div>
+<div id="title">Animated Statistics Using R <font color="#FF0000">(to be moved to <a href="http://animation.yihui.name" title="http://animation.yihui.name" target="_blank">AniWiki</a>!)</font> </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<div id="mainwrap">
+<div id="wrapper">
+<!-- InstanceBeginRepeat name="navigation" --><!-- InstanceBeginRepeatEntry -->
+  <div id="nav" >
+    <ul>
+      <li><a href="../">Home</a></li>
+      <li><a href="../news/">What's New</a> </li>
+      <li><a href="../intro/">Introduction to R</a>
+        <ul>
+          <li><a href="../intro/install/">Installation</a></li>
+            <li><a href="../intro/documentations/">Documentations</a></li>
+          </ul>
+      </li>
+      <li><a href="../gr/">R Graphics
+        </a>
+        <ul>
+          <li><a href="../gr/elements/">Elements</a></li>
+          <li><a href="../gr/graphics/">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">graphics</font></a></li>
+          <li><a href="../gr/animation/" title="Introduction to the package 'animation'">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">animation</font></a> </li>
+          </ul>
+      </li>
+      <li><a href="../stat/">Animated Statistics
+        </a>
+        <ul>
+          <li><a href="../stat/probability/">Theory of Probability</a></li>
+          <li><a href="../stat/sampling_survey/">Sampling Survey</a> </li>
+          <li>Mathematical Stat.</li>
+          <li>Linear Models</li>
+          <li>Nonparametric Stat.</li>
+          <li>Time Series Analysis </li>
+          <li><a href="../stat/multivariate_stat/">Multivariate Stat.</a></li>
+          <li><a href="../stat/computational_stat/">Computational Stat.</a> </li>
+          <li>Data Mining</li>
+          <li><a href="../stat/machine_learning/">Machine Learning</a> </li>
+        </ul>
+      </li>
+      <li><a href="./">Miscellanea
+        </a>
+        <ul>
+          <li><a href="gif_pdf_grDev.htm" title="Different file formats that can be probably used in animations">Animation Tricks</a></li>
+          <li><a href="java.htm" title="How to make better animations using JavaScript">JavaScript Details</a> </li>
+          <li><a href="highlight.htm" title="Highlight R code using software &quot;Highlight&quot; by Andre Simon">Highlight R Code</a></li>
+          <li><a href="ideas.htm">Ideas</a> </li>
+          <li><a href="credits.htm">Credits</a></li>
+          <li><a href="../news/feed.xml">RSS Feed</a> </li>
+        </ul>
+      </li>
+      </ul>
+  </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+
+<!-- InstanceBeginEditable name="body" -->
+<div id="main">
+<div id="maintitle">To better illustrate animations in web pages, there is still some work to do. </div>
+<fieldset>
+<legend>How are Pictures Animated by JavaScript? </legend>
+<p>As I have explained in the page &quot;<a href="gif_pdf_grDev.htm">Animation Tricks</a>&quot;, the animation is constructed using custom JavaScript functions to continually display the  image frames one after another by a certain time interval. To fulfill this idea, we should first of all prepare a series of images (either hidden somewhere in a page or only URLs), then find a way to display them sequentially <span class="mono"></span> through a <em>loop</em> with a time interval specified by the function <em>setTimeout()</em>. </p>
+<blockquote><p>setTimeout ( expression, timeout );</p></blockquote>
+<p>The code in the second part below has shown a complete example for the usage. </p>
+</fieldset>
+<fieldset>
+<legend>How to Guarantee the Speed of Loading Illustation? </legend>
+<p>Of course we hope the downloading of our animations can be as fast as possible so that they can be displayed more <em>fluently</em>, or the user has to wait for some time till all the <em>frames</em> of an animation have been downloaded. To solve this problem, we simply need to <em>preload</em> all the frames beforehand. </p>
+<p>I searched online and  found the one and almost only solution: nearly all people told us to create an image <em>object</em> in JavaScript and by assigning image addresses to the <span class="mono">src</span> attribute of this object one by one (via a loop), those image frames will also be downloaded into the <em>cache</em> of the user and can be used again later in the animation. </p>
+<p>However, I found this solution was actually <em>invalid</em>! Images cannot be loaded by this way, because JavaScript will <em>not</em> wait for the downloading of images! But through my trials, I discovered another really valid method (for both  Mozilla Firefox and Microsoft Internet Explorer). The idea is still taking advantage of the web browser's cache: we <em>hide</em> those images in a division (<span class="mono">&lt;div&gt;&lt;/div&gt;</span>) in order that they can <em>really</em> be downloaded into the browser's cache. </p>
+<p>We first download the images in the hidden division with <span class="mono">id = &quot;divPreload&quot;</span>, then  these images will be displayed one after another using the function <em>displayImage()</em> which continually change the CSS styles (to display or not to display) of divisions containing image frames. Besides, I've also provided two functions <em>stopImage()</em> for terminating the animation and <em>fasterImage()</em> for controlling the time interval of the animation. </p>
+<pre class="hl"><ol><li class="hl">﻿<span class="hl kwa">&lt;html&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;head&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;title&gt;</span>Animated Statistics Using R -- Yihui XIE<span class="hl kwa">&lt;/title&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;style</span> type=<span class="hl str">&quot;text/css&quot;</span>&gt;</li>
+<li class="hl">#percent <span class="hl sym">{</span></li>
+<li class="hl">    <span class="hl kwa">background-color</span><span class="hl sym">:</span> #FF0000<span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">height</span><span class="hl sym">:</span> <span class="hl num">100</span><span class="hl sym">%;</span></li>
+<li class="hl">    <span class="hl kwa">color</span><span class="hl sym">:</span> #FFFFFF<span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">font-family</span><span class="hl sym">:</span> <span class="hl str">&quot;Bitstream Vera Sans Mono&quot;</span><span class="hl sym">,</span> <span class="hl str">&quot;Courier New&quot;</span><span class="hl sym">,</span> <span class="hl kwa">monospace</span><span class="hl sym">;</span></li>
+<li class="hl"><span class="hl sym">}</span></li>
+<li class="hl">#divDemo <span class="hl sym">{</span></li>
+<li class="hl">    <span class="hl kwa">height</span><span class="hl sym">:</span> <span class="hl num">300</span>px<span class="hl sym">;</span></li>
+<li class="hl"><span class="hl sym">}</span></li>
+<li class="hl">#divPreload <span class="hl sym">{</span></li>
+<li class="hl">    <span class="hl kwa">display</span><span class="hl sym">:</span> <span class="hl kwa">none</span><span class="hl sym">;</span></li>
+<li class="hl"><span class="hl sym">}</span></li>
+<li class="hl">&nbsp;</li>
+<li class="hl">#divControl <span class="hl sym">{</span></li>
+<li class="hl">    <span class="hl kwa">margin-top</span><span class="hl sym">:</span> <span class="hl num">20</span>px<span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">margin-bottom</span><span class="hl sym">:</span> <span class="hl num">10</span>px<span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">font-family</span><span class="hl sym">:</span> <span class="hl str">&quot;Bitstream Vera Sans Mono&quot;</span><span class="hl sym">,</span> <span class="hl str">&quot;Courier New&quot;</span><span class="hl sym">,</span> <span class="hl kwa">monospace</span><span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">font-size</span><span class="hl sym">:</span> <span class="hl num">12</span>px<span class="hl sym">;</span></li>
+<li class="hl"><span class="hl sym">}</span></li>
+<li class="hl">&nbsp;</li>
+<li class="hl">#loading <span class="hl sym">{</span></li>
+<li class="hl">    <span class="hl kwa">font-family</span><span class="hl sym">:</span> <span class="hl str">&quot;Bitstream Vera Sans Mono&quot;</span><span class="hl sym">,</span> <span class="hl str">&quot;Courier New&quot;</span><span class="hl sym">,</span> <span class="hl kwa">monospace</span><span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">color</span><span class="hl sym">:</span> #FFFFFF<span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">background-color</span><span class="hl sym">:</span> #<span class="hl num">990000</span><span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">padding</span><span class="hl sym">:</span> <span class="hl num">2</span>px<span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">width</span><span class="hl sym">:</span> <span class="hl num">30</span><span class="hl sym">%;</span></li>
+<li class="hl">    <span class="hl kwa">float</span><span class="hl sym">:</span> <span class="hl kwa">left</span><span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">margin-top</span><span class="hl sym">:</span> <span class="hl num">10</span>px<span class="hl sym">;</span></li>
+<li class="hl">    <span class="hl kwa">text-align</span><span class="hl sym">:</span> <span class="hl kwa">left</span><span class="hl sym">;</span></li>
+<li class="hl"><span class="hl sym">}</span></li>
+<li class="hl"><span class="hl kwa">&lt;/style&gt;</span></li>
+<li class="hl"><span class="hl sym">&lt;</span>script <span class="hl kwc">language</span><span class="hl sym">=</span><span class="hl str">&quot;JavaScript&quot;</span> <span class="hl kwc">type</span><span class="hl sym">=</span><span class="hl str">&quot;text/javascript&quot;</span><span class="hl sym">&gt;</span></li>
+<li class="hl"><span class="hl kwa">var</span> t</li>
+<li class="hl"><span class="hl kwa">var</span> n <span class="hl sym">=</span> <span class="hl num">1</span></li>
+<li class="hl"><span class="hl kwa">var</span> i <span class="hl sym">=</span> <span class="hl num">1</span></li>
+<li class="hl"><span class="hl kwa">var</span> nmax <span class="hl sym">=</span> <span class="hl num">10</span> <span class="hl slc">//how many graphs to be shown</span></li>
+<li class="hl"><span class="hl kwa">function</span> <span class="hl kwd">displayImage</span><span class="hl sym">() {</span></li>
+<li class="hl">    <span class="hl kwa">var</span> lblTime <span class="hl sym">=</span> <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;lbl&quot;</span><span class="hl sym">)</span></li>
+<li class="hl">    <span class="hl kwa">var</span> tm <span class="hl sym">=</span> <span class="hl kwc">Math</span><span class="hl sym">.</span><span class="hl kwc">round</span><span class="hl sym">((</span><span class="hl kwd">parseFloat</span><span class="hl sym">(</span>lblTime<span class="hl sym">.</span><span class="hl kwc">innerHTML</span><span class="hl sym">))*</span><span class="hl num">1000</span><span class="hl sym">)</span></li>
+<li class="hl">    <span class="hl kwa">if</span> <span class="hl sym">(</span>n <span class="hl sym">&gt;</span> nmax<span class="hl sym">)</span> n <span class="hl sym">=</span> <span class="hl num">1</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnBegin&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">=</span> <span class="hl kwa">true</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnStop&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">=</span> <span class="hl kwa">false</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnFaster&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">= (</span><span class="hl kwd">parseFloat</span><span class="hl sym">(</span>lblTime<span class="hl sym">.</span><span class="hl kwc">innerHTML</span><span class="hl sym">) &lt;=</span> <span class="hl num">0</span><span class="hl sym">)</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnSlower&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">=</span> <span class="hl kwa">false</span></li>
+<li class="hl">    <span class="hl kwa">for</span><span class="hl sym">(</span>i <span class="hl sym">=</span> <span class="hl num">1</span><span class="hl sym">;</span> i <span class="hl sym">&lt;=</span> nmax<span class="hl sym">;</span> i<span class="hl sym">++){</span></li>
+<li class="hl">        <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;divPreload&quot;</span> <span class="hl sym">+</span> i<span class="hl sym">).</span>style<span class="hl sym">.</span>display <span class="hl sym">=</span> <span class="hl str">&quot;none&quot;</span></li>
+<li class="hl">    <span class="hl sym">}</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;divPreload&quot;</span><span class="hl sym">).</span>style<span class="hl sym">.</span>display <span class="hl sym">=</span> <span class="hl str">&quot;block&quot;</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;divPreload&quot;</span> <span class="hl sym">+</span> n<span class="hl sym">).</span>style<span class="hl sym">.</span>display <span class="hl sym">=</span> <span class="hl str">&quot;block&quot;</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;lblImage&quot;</span><span class="hl sym">).</span><span class="hl kwc">innerHTML</span> <span class="hl sym">=</span> <span class="hl str">&quot;Graph &quot;</span> <span class="hl sym">+</span> n <span class="hl sym">+</span> <span class="hl str">&quot; of &quot;</span> <span class="hl sym">+</span> nmax</li>
+<li class="hl">    t <span class="hl sym">=</span> <span class="hl kwc">setTimeout</span><span class="hl sym">(</span><span class="hl str">&quot;displayImage()&quot;</span><span class="hl sym">,</span> tm<span class="hl sym">)</span> <span class="hl slc">//change every tm seconds</span></li>
+<li class="hl">    n<span class="hl sym">++</span></li>
+<li class="hl"><span class="hl sym">}</span></li>
+<li class="hl">&nbsp;</li>
+<li class="hl"><span class="hl kwa">function</span> <span class="hl kwd">stopImage</span><span class="hl sym">() {</span></li>
+<li class="hl">    <span class="hl kwc">clearTimeout</span><span class="hl sym">(</span>t<span class="hl sym">)</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnBegin&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">=</span> <span class="hl kwa">false</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnStop&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">=</span> <span class="hl kwa">true</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnFaster&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">=</span> <span class="hl kwa">true</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnSlower&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">=</span> <span class="hl kwa">true</span></li>
+<li class="hl">    n<span class="hl sym">--</span></li>
+<li class="hl"><span class="hl sym">}</span></li>
+<li class="hl">&nbsp;</li>
+<li class="hl"><span class="hl kwa">function</span> <span class="hl kwd">fasterImage</span><span class="hl sym">(</span>step<span class="hl sym">) {</span></li>
+<li class="hl">    <span class="hl kwa">var</span> lblTime <span class="hl sym">=</span> <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;lbl&quot;</span><span class="hl sym">)</span></li>
+<li class="hl">    <span class="hl kwa">var</span> pct <span class="hl sym">=</span> <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;percent&quot;</span><span class="hl sym">)</span></li>
+<li class="hl">    lblTime<span class="hl sym">.</span><span class="hl kwc">innerHTML</span> <span class="hl sym">=</span> <span class="hl kwc">Math</span><span class="hl sym">.</span><span class="hl kwc">round</span><span class="hl sym">((</span><span class="hl kwd">parseFloat</span><span class="hl sym">(</span>lblTime<span class="hl sym">.</span><span class="hl kwc">innerHTML</span><span class="hl sym">) +</span> step<span class="hl sym">)*</span><span class="hl num">1000</span><span class="hl sym">)/</span><span class="hl num">1000</span></li>
+<li class="hl">    <span class="hl kwa">var</span> tmp <span class="hl sym">=</span> <span class="hl kwd">parseFloat</span><span class="hl sym">(</span>lblTime<span class="hl sym">.</span><span class="hl kwc">innerHTML</span><span class="hl sym">)</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnFaster&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">= (</span>tmp <span class="hl sym">&lt;=</span> <span class="hl num">0</span><span class="hl sym">)</span></li>
+<li class="hl">    <span class="hl kwa">if</span> <span class="hl sym">(</span>tmp <span class="hl sym">&gt;=</span><span class="hl num">0</span> <span class="hl sym">&amp;&amp;</span> tmp <span class="hl sym">&lt;=</span> <span class="hl num">10</span><span class="hl sym">) {</span></li>
+<li class="hl">        pct<span class="hl sym">.</span>style<span class="hl sym">.</span><span class="hl kwc">width</span> <span class="hl sym">=</span> <span class="hl num">100</span> <span class="hl sym">-</span> <span class="hl kwc">Math</span><span class="hl sym">.</span><span class="hl kwc">round</span><span class="hl sym">((</span><span class="hl kwd">parseFloat</span><span class="hl sym">(</span>lblTime<span class="hl sym">.</span><span class="hl kwc">innerHTML</span><span class="hl sym">))*</span><span class="hl num">10</span><span class="hl sym">) +</span> <span class="hl str">&quot;%&quot;</span></li>
+<li class="hl">        pct<span class="hl sym">.</span><span class="hl kwc">innerHTML</span> <span class="hl sym">=</span> pct<span class="hl sym">.</span>style<span class="hl sym">.</span><span class="hl kwc">width</span></li>
+<li class="hl">        pct<span class="hl sym">.</span>style<span class="hl sym">.</span>display <span class="hl sym">=</span> <span class="hl str">&quot;block&quot;</span></li>
+<li class="hl">    <span class="hl sym">}</span></li>
+<li class="hl">    <span class="hl kwa">else</span> pct<span class="hl sym">.</span>style<span class="hl sym">.</span>display <span class="hl sym">=</span> <span class="hl str">&quot;none&quot;</span></li>
+<li class="hl"><span class="hl sym">}</span></li>
+<li class="hl">&nbsp;</li>
+<li class="hl"><span class="hl kwc">window</span><span class="hl sym">.</span><span class="hl kwc">onload</span> <span class="hl sym">=</span> <span class="hl kwa">function</span><span class="hl sym">(){</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnBegin&quot;</span><span class="hl sym">).</span>disabled <span class="hl sym">=</span> <span class="hl kwa">false</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;btnBegin&quot;</span><span class="hl sym">).</span><span class="hl kwc">focus</span><span class="hl sym">()</span></li>
+<li class="hl">    <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">getElementById</span><span class="hl sym">(</span><span class="hl str">&quot;loading&quot;</span><span class="hl sym">).</span>style<span class="hl sym">.</span>display <span class="hl sym">=</span> <span class="hl str">&quot;none&quot;</span></li>
+<li class="hl"><span class="hl sym">}</span></li>
+<li class="hl">&nbsp;</li>
+<li class="hl"><span class="hl sym">&lt;/</span>script<span class="hl sym">&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;/head&gt;</span></li>
+<li class="hl">&nbsp;</li>
+<li class="hl"><span class="hl kwa">&lt;body&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;div</span> align=<span class="hl str">&quot;center&quot;</span> id=<span class="hl str">&quot;divDemo&quot;</span>&gt;</li>
+<li class="hl"><span class="hl kwa">&lt;div</span> id=<span class="hl str">&quot;loading&quot;</span>&gt;Animation loading...<span class="hl kwa">&lt;/div&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;div</span> id=<span class="hl str">&quot;divPreload&quot;</span>&gt;</li>
+<li class="hl"><span class="hl kwa">&lt;script</span> language=<span class="hl str">&quot;JavaScript&quot;</span> type=<span class="hl str">&quot;text/javascript&quot;</span>&gt;</li>
+<li class="hl">for(i=<span class="hl num">1</span>;i<span class="hl kwa">&lt;=nmax;i++){</span></li>
+<li class="hl">    document.write(<span class="hl str">&quot;&lt;div id=\&quot;</span>divPreload<span class="hl str">&quot; + i + &quot;</span>\<span class="hl str">&quot;&gt;&lt;img src=\&quot;</span>images/<span class="hl str">&quot;</span></li>
+<li class="hl"><span class="hl str">        + i + &quot;</span>.png\<span class="hl str">&quot; /&gt;&lt;/div&gt;&quot;</span>)</li>
+<li class="hl">}</li>
+<li class="hl"><span class="hl kwa">&lt;/script&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;/div&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;/div&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;div</span> style=<span class="hl str">&quot;border: solid 1px #FF0000; margin-top: 20px; height: 20px;&quot;</span> title=<span class="hl str">&quot;Speed&quot;</span>&gt;</li>
+<li class="hl"><span class="hl kwa">&lt;div</span> id=<span class="hl str">&quot;percent&quot;</span> style=<span class="hl str">&quot;width: 80%&quot;</span>&gt;<span class="hl num">80</span>%<span class="hl kwa">&lt;/div&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;/div&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;div</span> id=<span class="hl str">&quot;divControl&quot;</span>&gt;</li>
+<li class="hl"><span class="hl kwa">&lt;input</span> type=<span class="hl str">&quot;button&quot;</span> disabled=<span class="hl str">&quot;disabled&quot;</span> id=<span class="hl str">&quot;btnBegin&quot;</span></li>
+<li class="hl">    onClick=<span class="hl str">&quot;displayImage()&quot;</span> value=<span class="hl str">&quot;Begin&quot;</span>/&gt;</li>
+<li class="hl"><span class="hl kwa">&lt;input</span> type=<span class="hl str">&quot;button&quot;</span> disabled=<span class="hl str">&quot;disabled&quot;</span> id=<span class="hl str">&quot;btnFaster&quot;</span></li>
+<li class="hl">    onClick=<span class="hl str">&quot;fasterImage(-0.1)&quot;</span> value=<span class="hl str">&quot;Faster&quot;</span>/&gt;</li>
+<li class="hl"><span class="hl kwa">&lt;input</span> type=<span class="hl str">&quot;button&quot;</span> disabled=<span class="hl str">&quot;disabled&quot;</span> id=<span class="hl str">&quot;btnSlower&quot;</span></li>
+<li class="hl">    onClick=<span class="hl str">&quot;fasterImage(0.1)&quot;</span> value=<span class="hl str">&quot;Slower&quot;</span>/&gt;</li>
+<li class="hl"><span class="hl kwa">&lt;input</span> type=<span class="hl str">&quot;button&quot;</span> disabled=<span class="hl str">&quot;disabled&quot;</span> id=<span class="hl str">&quot;btnStop&quot;</span></li>
+<li class="hl">    onClick=<span class="hl str">&quot;stopImage()&quot;</span> value=<span class="hl str">&quot;Stop &quot;</span>/&gt;</li>
+<li class="hl">Time Interval: <span class="hl kwa">&lt;label</span> id=<span class="hl str">&quot;lbl&quot;</span>&gt;<span class="hl num">2</span><span class="hl kwa">&lt;/label&gt;</span> seconds; <span class="hl kwa">&lt;label</span> id=<span class="hl str">&quot;lblImage&quot;</span>&gt;<span class="hl kwa">&lt;/label&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;/div&gt;</span></li>
+<li class="hl"><span class="hl kwa">&lt;/body&gt;</span></li>
+<li class="hl">&nbsp;</li>
+<li class="hl"><span class="hl kwa">&lt;/html&gt;</span></li>
+</ol></pre>
+</fieldset>
+<fieldset>
+<legend>A Simple Demonstration of Brownian Motion </legend>
+<p>Here is a simple demonstration of random walk on the 2D plane (Brownian motion): </p>
+<div align="center" id="divDemo">
+<div id="loading">loading animation frames...</div>
+<div id="divPreload">
+<script language="JavaScript" type="text/javascript">
+var nmax = 30
+var ht = 412
+for(i = 1; i <= nmax; i++){
+	document.write("<div id=\"divPreload" + i + "\"><img src=\"images/" + i + ".png\" /></div>")
+}
+</script>
+</div>
+</div>
+<div style="border: solid 1px #FF0000; margin-top: 20px; height: 20px;" title="Speed">
+<div id="percent" style="width: 80%">80%</div>
+</div>
+<div id="divControl">
+<input type="button" disabled="disabled" id="btnBegin" onclick="displayImage()" value="Begin"/>
+<input type="button" disabled="disabled" id="btnFaster" onclick="fasterImage(-0.1)" value="Faster"/>
+<input type="button" disabled="disabled" id="btnSlower" onclick="fasterImage(0.1)" value="Slower"/>
+<input type="button" disabled="disabled" id="btnStop" onclick="stopImage()" value=" Stop "/> 
+Time Interval: <label id="lbl">2</label> seconds; <label id="lblImage"></label>
+</div>
+</fieldset>
+</div>
+<!-- InstanceEndEditable --></div></div>
+<!-- InstanceBeginRepeat name="footer" --><!-- InstanceBeginRepeatEntry -->
+<div id=footwrap>
+<div id="footer">Copyright &copy;  2007 by <a href="http://www.yihui.name/cv/" target="_blank">Yihui XIE</a> from Beijing, China.
+      Created on Oct 6, 2007; Last updated on 
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+
+var m_names = new Array("Jan", "Feb", "Mar", 
+"Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+"Oct", "Nov", "Dec");
+
+var d = new Date(document.lastModified);
+var curr_date = d.getDate();
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+document.write(m_names[curr_month] + " " + curr_date + ", " + curr_year);
+
+//-->
+</SCRIPT>
+<br />
+Recommended resolution: 1280*1024; Web browser: Firefox; <a href="http://www.yihui.name/en/guestbook.php" title="Leave a message to me in my guestbook" target="_blank">Feedbacks</a> are most welcome. </div>
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+</body>
+<!-- InstanceEnd --></html>

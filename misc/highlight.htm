@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/r_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Highlight R Code: Animated Statistics Using R -- Yihui XIE</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../css.css" rel="stylesheet" type="text/css" />
+<link href="../r.css" rel="stylesheet" type="text/css" />
+<link href="../favicon.ico" rel="shortcut icon" />
+<script language="JavaScript" type="text/javascript" src="../fun.js"></script>
+<meta name="Keywords" content="animations, statistics, R, Yihui Xie, R Graphics, grid graphics, Theory of Probability, Mathematical Statistics, Linear Models, Nonparametric Statistics, Time Series, Multivariate Statistics, Numerical Optimization, Data Mining, Machine Learning" />
+<meta name="Description" content="Animated Statistics Using R: a web site for animations in the illustration of statistical theories, methods and applications. (by Yihui XIE)" />
+<meta name="Author" content="Yihui XIE" />
+</head>
+
+<body>
+<!-- InstanceBeginRepeat name="header" --><!-- InstanceBeginRepeatEntry -->
+<div id="header">
+<div id="logo"><img src="../images/banner.png" width="600" height="100" align="left" />
+<pre class="hl" style="margin: 0px; border: none; padding: 0px; background-color: #FFF8DC"><span class="hl kwa">for</span> <span class="hl sym">(</span>i <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl sym">:</span><span class="hl num">360</span><span class="hl sym">) {</span>
+    <span class="hl kwc">plot</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> ann <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">,</span> type <span class="hl sym">=</span> <span class="hl str">&quot;n&quot;</span><span class="hl sym">,</span> axes <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">)</span>
+    <span class="hl kwc">text</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> <span class="hl num">1</span><span class="hl sym">,</span> <span class="hl str">&quot;Animation&quot;</span><span class="hl sym">,</span> srt <span class="hl sym">=</span> i<span class="hl sym">,</span> <span class="hl kwc">col</span> <span class="hl sym">=</span>
+        <span class="hl kwc">rainbow</span><span class="hl sym">(</span><span class="hl num">360</span><span class="hl sym">)[</span>i<span class="hl sym">],</span> cex <span class="hl sym">=</span> <span class="hl num">7</span> <span class="hl sym">*</span> i<span class="hl sym">/</span><span class="hl num">360</span><span class="hl sym">)</span>
+    <span class="hl kwc">Sys.sleep</span><span class="hl sym">(</span><span class="hl num">0.01</span><span class="hl sym">)}</span>
+</pre></div>
+</div>
+<div id="title">Animated Statistics Using R <font color="#FF0000">(to be moved to <a href="http://animation.yihui.name" title="http://animation.yihui.name" target="_blank">AniWiki</a>!)</font> </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<div id="mainwrap">
+<div id="wrapper">
+<!-- InstanceBeginRepeat name="navigation" --><!-- InstanceBeginRepeatEntry -->
+  <div id="nav" >
+    <ul>
+      <li><a href="../">Home</a></li>
+      <li><a href="../news/">What's New</a> </li>
+      <li><a href="../intro/">Introduction to R</a>
+        <ul>
+          <li><a href="../intro/install/">Installation</a></li>
+            <li><a href="../intro/documentations/">Documentations</a></li>
+          </ul>
+      </li>
+      <li><a href="../gr/">R Graphics
+        </a>
+        <ul>
+          <li><a href="../gr/elements/">Elements</a></li>
+          <li><a href="../gr/graphics/">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">graphics</font></a></li>
+          <li><a href="../gr/animation/" title="Introduction to the package 'animation'">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">animation</font></a> </li>
+          </ul>
+      </li>
+      <li><a href="../stat/">Animated Statistics
+        </a>
+        <ul>
+          <li><a href="../stat/probability/">Theory of Probability</a></li>
+          <li><a href="../stat/sampling_survey/">Sampling Survey</a> </li>
+          <li>Mathematical Stat.</li>
+          <li>Linear Models</li>
+          <li>Nonparametric Stat.</li>
+          <li>Time Series Analysis </li>
+          <li><a href="../stat/multivariate_stat/">Multivariate Stat.</a></li>
+          <li><a href="../stat/computational_stat/">Computational Stat.</a> </li>
+          <li>Data Mining</li>
+          <li><a href="../stat/machine_learning/">Machine Learning</a> </li>
+        </ul>
+      </li>
+      <li><a href="./">Miscellanea
+        </a>
+        <ul>
+          <li><a href="gif_pdf_grDev.htm" title="Different file formats that can be probably used in animations">Animation Tricks</a></li>
+          <li><a href="java.htm" title="How to make better animations using JavaScript">JavaScript Details</a> </li>
+          <li><a href="highlight.htm" title="Highlight R code using software &quot;Highlight&quot; by Andre Simon">Highlight R Code</a></li>
+          <li><a href="ideas.htm">Ideas</a> </li>
+          <li><a href="credits.htm">Credits</a></li>
+          <li><a href="../news/feed.xml">RSS Feed</a> </li>
+        </ul>
+      </li>
+      </ul>
+  </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+
+<!-- InstanceBeginEditable name="body" -->
+<div id="main">
+<div id="maintitle"><a href="http://www.andre-simon.de" target="_blank">Highlight</a> is a software tool   for formatting source code in many languages, including R.</div>
+<fieldset>
+<legend>About Hightlight </legend>
+<p>Highlight is a freeware for converting source code to formatted text with syntax highlighting by <a href="http://www.andre-simon.de/" target="_blank">Andr&eacute; Simon</a>; it is released under the terms of the GNU <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GPL</a> license. It <a href="http://www.andre-simon.de/doku/highlight/en/highlight_langs.html" target="_blank">supports</a> more than 100 programming languages, including R. You may download it freely from <a href="http://www.andre-simon.de/zip/download.html" target="_blank">this page</a>. </p>
+<p>I'm using Highlight because it will be far more convenient to read those <strong>boring</strong> (!!!) program codes. The colors and font styles will be of great help to us. </p>
+</fieldset>
+<fieldset>
+<legend>Hightliehg for R Language </legend>
+<p>By default the definition file for R in Hightlight is far from complete, but it's very easy to complement the definition, as we only need to define the keywords of R. I've written the detailed method in one of my blog pages here: <a href="http://www.yihui.name/en/read.php/6.htm" target="_blank">http://www.yihui.name/en/read.php/6.htm</a></p>
+<p>Actually the extraction of R keywords (mainly funtions) can be easily realized in R itself, and the method I mentioned in the above blog page is just like: </p>
+<pre class="hl"><ol><li class="hl">lst <span class="hl sym">=</span> <span class="hl kwc">search</span><span class="hl sym">()</span></li> <li class="hl">lst <span class="hl sym">=</span> lst<span class="hl sym">[</span><span class="hl kwc">grep</span><span class="hl sym">(</span><span class="hl str">"package:"</span><span class="hl sym">,</span> lst<span class="hl sym">)]</span></li> <li class="hl"><span class="hl slc">########################################################</span></li> <li class="hl"><span class="hl slc"># "package:stats" "package:graphics" "package:grDevices"</span></li> <li class="hl"><span class="hl slc"># "package:utils" "package:datasets" "package:methods"</span></li> <li class="hl"><span class="hl slc"># "package:base"</span></li> <li class="hl"><span class="hl slc">########################################################</span></li> <li class="hl">x <span class="hl sym">=</span> <span class="hl kwb">NULL</span></li> <li class="hl"><span class="hl kwa">for</span> <span class="hl sym">(</span>i <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl sym">:</span><span class="hl kwc">length</span><span class="hl sym">(</span>lst<span class="hl sym">))</span> x <span class="hl sym">=</span> <span class="hl kwc">c</span><span class="hl sym">(</span>x<span class="hl sym">,</span> <span class="hl kwc">ls</span><span class="hl sym">(</span>lst<span class="hl sym">[</span>i<span class="hl sym">]))</span></li> <li class="hl">y <span class="hl sym">=</span> x<span class="hl sym">[-</span><span class="hl kwc">grep</span><span class="hl sym">(</span><span class="hl str">"[]</span><span class="hl esc">\\\ \\</span><span class="hl str">|</span><span class="hl esc">\\</span><span class="hl str">(</span><span class="hl esc">\\</span><span class="hl str">)</span><span class="hl esc">\\</span><span class="hl str">[</span><span class="hl esc">\\</span><span class="hl str">{</span><span class="hl esc">\\</span><span class="hl str">^</span><span class="hl esc">\\</span><span class="hl str">$</span><span class="hl esc">\\</span><span class="hl str">*</span><span class="hl esc">\\</span><span class="hl str">+</span><span class="hl esc">\\</span><span class="hl str">?~#%&amp;=:!/@&lt;&gt;-]"</span><span class="hl sym">,</span></li> <li class="hl"> &nbsp; &nbsp;x<span class="hl sym">)]</span></li> <li class="hl"><span class="hl slc"># remove "functions" with special symbols using regexp</span></li> <li class="hl">kw <span class="hl sym">=</span> <span class="hl kwc">c</span><span class="hl sym">(</span><span class="hl str">"if"</span><span class="hl sym">,</span> <span class="hl str">"else"</span><span class="hl sym">,</span> <span class="hl str">"repeat"</span><span class="hl sym">,</span> <span class="hl str">"while"</span><span class="hl sym">,</span> <span class="hl str">"function"</span><span class="hl sym">,</span></li> <li class="hl"> &nbsp; &nbsp;<span class="hl str">"for"</span><span class="hl sym">,</span> <span class="hl str">"in"</span><span class="hl sym">,</span> <span class="hl str">"next"</span><span class="hl sym">,</span> <span class="hl str">"break"</span><span class="hl sym">,</span> <span class="hl str">"ifelse"</span><span class="hl sym">,</span> <span class="hl str">"switch"</span><span class="hl sym">,</span> <span class="hl str">"NULL"</span><span class="hl sym">,</span></li> <li class="hl"> &nbsp; &nbsp;<span class="hl str">"NA"</span><span class="hl sym">,</span> <span class="hl str">"Inf"</span><span class="hl sym">,</span> <span class="hl str">"NaN"</span><span class="hl sym">,</span> <span class="hl str">"TRUE"</span><span class="hl sym">,</span> <span class="hl str">"T"</span><span class="hl sym">,</span> <span class="hl str">"FALSE"</span><span class="hl sym">,</span> <span class="hl str">"F"</span><span class="hl sym">)</span></li> <li class="hl"><span class="hl slc"># remove some constants, etc</span></li> <li class="hl"><span class="hl kwa">for</span> <span class="hl sym">(</span>i <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl sym">:</span><span class="hl kwc">length</span><span class="hl sym">(</span>kw<span class="hl sym">))</span> y <span class="hl sym">=</span> y<span class="hl sym">[</span>y <span class="hl sym">!=</span> kw<span class="hl sym">[</span>i<span class="hl sym">]]</span></li> <li class="hl"><span class="hl kwc">sink</span><span class="hl sym">(</span><span class="hl str">"c:/func.txt"</span><span class="hl sym">)</span> &nbsp; <span class="hl slc"># save the result</span></li> <li class="hl"><span class="hl kwc">cat</span><span class="hl sym">(</span>y<span class="hl sym">,</span> sep <span class="hl sym">=</span> <span class="hl str">" "</span><span class="hl sym">)</span> <span class="hl slc"># format the result as highlight needs</span></li> <li class="hl"><span class="hl kwc">sink</span><span class="hl sym">()</span></li></ol></pre>
+<p>I have modified the above code and put it in the package <a href="http://cran.r-project.org/src/contrib/Descriptions/animation.html" target="_blank">'animation'</a> now: the function <em>highlight.def()</em> can dynamically generate such a definition file. </p>
+<p>The R definition file for Highlight can also be <a href="http://www.yihui.name/en/attachment.php?f=attachment/1189473976_0.gz">downloaded there</a>. </p>
+</fieldset>
+</div>
+<!-- InstanceEndEditable --></div></div>
+<!-- InstanceBeginRepeat name="footer" --><!-- InstanceBeginRepeatEntry -->
+<div id=footwrap>
+<div id="footer">Copyright &copy;  2007 by <a href="http://www.yihui.name/cv/" target="_blank">Yihui XIE</a> from Beijing, China.
+      Created on Oct 6, 2007; Last updated on 
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+
+var m_names = new Array("Jan", "Feb", "Mar", 
+"Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+"Oct", "Nov", "Dec");
+
+var d = new Date(document.lastModified);
+var curr_date = d.getDate();
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+document.write(m_names[curr_month] + " " + curr_date + ", " + curr_year);
+
+//-->
+</SCRIPT>
+<br />
+Recommended resolution: 1280*1024; Web browser: Firefox; <a href="http://www.yihui.name/en/guestbook.php" title="Leave a message to me in my guestbook" target="_blank">Feedbacks</a> are most welcome. </div>
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+</body>
+<!-- InstanceEnd --></html>

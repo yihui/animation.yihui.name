@@ -1,0 +1,225 @@
+body {
+	margin: 0px;
+	padding: 1px;
+	font-family: "Bitstream Vera Sans", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333333;
+	background-color: #FFF8DC;
+	line-height: 18px;
+	text-align: center;
+}
+
+p {
+	text-indent: 2em;
+	text-align: justify;
+}
+
+pre {
+	font-family: "Bitstream Vera Sans Mono", "Courier New", monospace;
+	font-size: 11px;
+	color: #666666;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	border-top-color: #333333;
+	border-bottom-color: #666666;
+	background-color: #F7F7F7;
+	margin-top: 20px;
+	margin-right: 0;
+	margin-bottom: 20px;
+	margin-left: 0;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+blockquote {
+	margin: 20px 0;
+	padding: 0 20px 0 50px;
+	color: #666666;
+	font-size: 11px;
+	background-image: url(./images/quote.png);
+	background-repeat: no-repeat;
+	background-position: 10px 0;
+}
+
+acronym{
+	text-decoration:none;
+	cursor:help;
+	border: 1px dotted #292929;
+}
+
+#nav {
+	width: 210px;
+	float: left;
+	background-color: #FFFFFF;
+}
+#main {
+	width: 740px;
+	float: right;
+	height: auto;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FF0000;
+	padding-left: 20px;
+	font-family: "Bitstream Charter", Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+}
+#wrapper {
+	width: 980px;
+	text-align: left;
+	height: auto;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	padding: 2px;
+	clear: both;
+}
+#mainwrap {
+	margin: 0px;
+	width: 100%;
+	background-color: #FFFFFF;
+	clear: both;
+	float: left;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+}
+
+#logo {
+	text-align: left;
+	width: 980px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 100px;
+}
+#header {
+	width: 100%;
+	background-color: #FFF8DC;
+}
+
+#footer {
+	text-align: left;
+	width: 980px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding: 2px;
+	font-size: 11px;
+}
+#footwrap {
+	background-color: #FFF8DC;
+	width: 100%;
+	margin: 0px;
+	clear: both;
+}
+
+#percent {
+	background-color: #FF0000;
+	height: 100%;
+	color: #FFFFFF;
+	font-family: "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+#divDemo {
+	height: 100px;
+}
+#divPreload {
+	display: none;
+}
+
+#divControl {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-family: "Bitstream Vera Sans Mono", "Courier New", monospace;
+	font-size: 12px;
+}
+
+#loading {
+	font-family: "Bitstream Vera Sans Mono", "Courier New", monospace;
+	color: #FFFFFF;
+	background-color: #990000;
+	padding: 2px;
+	width: auto;
+	float: left;
+	text-align: left;
+}
+
+fieldset {
+	border: 1px solid #FF0000;
+	margin-bottom: 10px;
+	width: auto;
+	margin-right: 0px;
+	margin-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 0px;
+	padding-bottom: 3px;
+}
+
+legend {
+	font-variant: small-caps;
+	font-weight: bold;
+	font-size: 14px;
+	color: #333333;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	left: 1px;
+	top: 1px;
+	color: #FF0000;
+	position: relative;
+}
+ul {
+	list-style-type: circle;
+}
+
+
+#nav li {
+	font-weight: bold;
+	line-height: 20px;
+}
+#nav ul {
+	margin-top: 0px;
+}
+
+#nav li ul li{
+	list-style-type: square;
+	font-weight: normal;
+	font-size: 11px;
+}
+#title {
+	font-weight: bold;
+	letter-spacing: 3px;
+	word-spacing: 5px;
+	float: left;
+	width: 100%;
+	clear: both;
+	background-color: #FFDCB9;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 15px;
+}
+#maintitle {
+	border: 1px solid #FF0000;
+	padding: 3px
+}
+.mono {
+	font-family: "Bitstream Vera Sans Mono", "Courier New", monospace;
+	font-size: 13px;
+}
+#toc ol {
+	list-style-type: upper-roman;
+	font-weight: bold;
+}
+
+#toc ol ol {
+	list-style-type: decimal;
+	font-weight: normal;
+}

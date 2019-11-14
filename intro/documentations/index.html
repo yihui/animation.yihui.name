@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/r_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>R documentations: Animated Statistics Using R -- Yihui XIE</title>
+<script language="JavaScript" type="text/javascript" src="../../fun.js"></script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../css.css" rel="stylesheet" type="text/css" />
+<link href="../../r.css" rel="stylesheet" type="text/css" />
+<link href="../../favicon.ico" rel="shortcut icon" />
+<script language="JavaScript" type="text/javascript" src="../../fun.js"></script>
+<meta name="Keywords" content="animations, statistics, R, Yihui Xie, R Graphics, grid graphics, Theory of Probability, Mathematical Statistics, Linear Models, Nonparametric Statistics, Time Series, Multivariate Statistics, Numerical Optimization, Data Mining, Machine Learning" />
+<meta name="Description" content="Animated Statistics Using R: a web site for animations in the illustration of statistical theories, methods and applications. (by Yihui XIE)" />
+<meta name="Author" content="Yihui XIE" />
+</head>
+
+<body>
+<!-- InstanceBeginRepeat name="header" --><!-- InstanceBeginRepeatEntry -->
+<div id="header">
+<div id="logo"><img src="../../images/banner.png" width="600" height="100" align="left" />
+<pre class="hl" style="margin: 0px; border: none; padding: 0px; background-color: #FFF8DC"><span class="hl kwa">for</span> <span class="hl sym">(</span>i <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl sym">:</span><span class="hl num">360</span><span class="hl sym">) {</span>
+    <span class="hl kwc">plot</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> ann <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">,</span> type <span class="hl sym">=</span> <span class="hl str">&quot;n&quot;</span><span class="hl sym">,</span> axes <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">)</span>
+    <span class="hl kwc">text</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> <span class="hl num">1</span><span class="hl sym">,</span> <span class="hl str">&quot;Animation&quot;</span><span class="hl sym">,</span> srt <span class="hl sym">=</span> i<span class="hl sym">,</span> <span class="hl kwc">col</span> <span class="hl sym">=</span>
+        <span class="hl kwc">rainbow</span><span class="hl sym">(</span><span class="hl num">360</span><span class="hl sym">)[</span>i<span class="hl sym">],</span> cex <span class="hl sym">=</span> <span class="hl num">7</span> <span class="hl sym">*</span> i<span class="hl sym">/</span><span class="hl num">360</span><span class="hl sym">)</span>
+    <span class="hl kwc">Sys.sleep</span><span class="hl sym">(</span><span class="hl num">0.01</span><span class="hl sym">)}</span>
+</pre></div>
+</div>
+<div id="title">Animated Statistics Using R <font color="#FF0000">(to be moved to <a href="http://animation.yihui.name" title="http://animation.yihui.name" target="_blank">AniWiki</a>!)</font> </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<div id="mainwrap">
+<div id="wrapper">
+<!-- InstanceBeginRepeat name="navigation" --><!-- InstanceBeginRepeatEntry -->
+  <div id="nav" >
+    <ul>
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../news/">What's New</a> </li>
+      <li><a href="../">Introduction to R</a>
+        <ul>
+          <li><a href="../install/">Installation</a></li>
+            <li><a href="./">Documentations</a></li>
+          </ul>
+      </li>
+      <li><a href="../../gr/">R Graphics
+        </a>
+        <ul>
+          <li><a href="../../gr/elements/">Elements</a></li>
+          <li><a href="../../gr/graphics/">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">graphics</font></a></li>
+          <li><a href="../../gr/animation/" title="Introduction to the package 'animation'">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">animation</font></a> </li>
+          </ul>
+      </li>
+      <li><a href="../../stat/">Animated Statistics
+        </a>
+        <ul>
+          <li><a href="../../stat/probability/">Theory of Probability</a></li>
+          <li><a href="../../stat/sampling_survey/">Sampling Survey</a> </li>
+          <li>Mathematical Stat.</li>
+          <li>Linear Models</li>
+          <li>Nonparametric Stat.</li>
+          <li>Time Series Analysis </li>
+          <li><a href="../../stat/multivariate_stat/">Multivariate Stat.</a></li>
+          <li><a href="../../stat/computational_stat/">Computational Stat.</a> </li>
+          <li>Data Mining</li>
+          <li><a href="../../stat/machine_learning/">Machine Learning</a> </li>
+        </ul>
+      </li>
+      <li><a href="../../misc/">Miscellanea
+        </a>
+        <ul>
+          <li><a href="../../misc/gif_pdf_grDev.htm" title="Different file formats that can be probably used in animations">Animation Tricks</a></li>
+          <li><a href="../../misc/java.htm" title="How to make better animations using JavaScript">JavaScript Details</a> </li>
+          <li><a href="../../misc/highlight.htm" title="Highlight R code using software &quot;Highlight&quot; by Andre Simon">Highlight R Code</a></li>
+          <li><a href="../../misc/ideas.htm">Ideas</a> </li>
+          <li><a href="../../misc/credits.htm">Credits</a></li>
+          <li><a href="../../news/feed.xml">RSS Feed</a> </li>
+        </ul>
+      </li>
+      </ul>
+  </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+
+<!-- InstanceBeginEditable name="body" -->
+<div id="main">
+<div id="maintitle">Some comments and notes to various R documentations. </div>
+<fieldset>
+<legend>Official Documentations </legend>
+<ul>
+  <li><strong>An Introduction to R</strong> is based on the former &quot;Notes on R&quot;,   gives an introduction to the language and how to use R for doing statistical   analysis and graphics. [<a href="http://cran.r-project.org/doc/manuals/R-intro.html" target="_blank">browse HTML</a> | <a href="http://cran.r-project.org/doc/manuals/R-intro.pdf" target="_blank">download PDF</a> ] <br />
+    <br />
+      <br />
+  </li>
+  <li>A draft of <strong>The R language definition</strong> documents the language <em>per se</em>. That is, the objects that it works on, and the details of the   expression evaluation process, which are useful to know when programming R   functions. [<a href="http://cran.r-project.org/doc/manuals/R-lang.html" target="_blank">browse HTML</a> | <a href="http://cran.r-project.org/doc/manuals/R-lang.pdf" target="_blank">download PDF</a> ] <br />
+      <br />
+        <br />
+  </li>
+  <li><strong>Writing R Extensions</strong> covers how to create your own   packages, write R help files, and the foreign language (C, C++, Fortran, ...)   interfaces. [<a href="http://cran.r-project.org/doc/manuals/R-exts.html" target="_blank">browse HTML</a> | <a href="http://cran.r-project.org/doc/manuals/R-exts.pdf" target="_blank">download PDF</a> ] <br />
+      <br />
+        <br />
+  </li>
+  <li><strong>R Data Import/Export</strong> describes the import and export   facilities available either in R itself or via packages which are available from   CRAN. [<a href="http://cran.r-project.org/doc/manuals/R-data.html" target="_blank">browse HTML</a> | <a href="http://cran.r-project.org/doc/manuals/R-data.pdf" target="_blank">download PDF</a> ] <br />
+      <br />
+        <br />
+  </li>
+  <li><strong>R Installation and Administration</strong> [<a href="http://cran.r-project.org/doc/manuals/R-admin.html" target="_blank">browse HTML</a> | <a href="http://cran.r-project.org/doc/manuals/R-admin.pdf" target="_blank">download PDF</a> ] <br />
+      <br />
+        <br />
+  </li>
+  <li><strong>R Internals</strong>: a guide to the internal structures of R and   coding standards for the core team working on R itself. [<a href="http://cran.r-project.org/doc/manuals/R-ints.html" target="_blank">browse HTML</a> | <a href="http://cran.r-project.org/doc/manuals/R-ints.pdf" target="_blank">download PDF</a> ] <br />
+      <br />
+        <br />
+  </li>
+  <li><strong>The R Reference Index</strong>: contains all help files of the R   standard and recommended packages in printable form. <a href="http://cran.r-project.org/doc/manuals/fullrefman.pdf" target="_blank">[download PDF, 14MB]</a> <br />
+      <br />
+        <br />
+    </li>
+  <li><strong><a href="http://cran.r-project.org/faqs.html" target="_blank">R FAQ</a><br />    
+      <br />
+      <br />
+  </strong></li>
+  <li><a href="http://cran.r-project.org/doc/Rnews" target="_blank"><strong>R Newsletter</strong></a> <br />
+      <br />
+        <br />
+  </li>
+</ul>
+</fieldset>
+<fieldset>
+<legend>Contributed Documentations </legend>
+<p>Documents with more than 100 pages: </p>
+<ul>
+  <li><strong>“Using R for Data Analysis and Graphics - Introduction, Examples and   Commentary” </strong>by John Maindonald (<a href="http://www.maths.anu.edu.au/%7Ejohnm/r/usingR.pdf">PDF</a>, data sets and scripts are available at <a href="http://wwwmaths.anu.edu.au/~johnm/">JM's homepage</a>). <br />
+  # good for R novices, because it introduces the basic knowledge in details; a little rough for graphics and statistical models. <a href="http://www.yihui.name/en/read.php/34.htm" target="_blank">http://www.yihui.name/en/read.php/34.htm</a><br />
+    <br />
+  </li>
+  <li><strong>“Simple R”</strong> by John Verzani (<a href="http://cran.r-project.org/doc/contrib/Verzani-SimpleR.pdf">PDF</a>, data sets, various PDF, PS and a   browsable HTML version are available at the <a href="http://www.math.csi.cuny.edu/Statistics/R/simpleR/">Simple R   homepage</a>). </li>
+  <li><strong>“Practical Regression and Anova using R”</strong> by Julian Faraway   (<a href="http://cran.r-project.org/doc/contrib/Faraway-PRA.pdf">PDF</a>, data sets and scripts are   available at the <a href="http://www.stat.lsa.umich.edu/~faraway/book/">book   homepage</a>). </li>
+  <li>The <strong><a href="http://cran.r-project.org/doc/contrib/Fox-Companion/appendix.html">Web   Appendix</a></strong> to the book “An R and S-PLUS Companion to Applied   Regression” by John Fox contains information about using S (R and S-PLUS) to fit   a variety of regression models. </li>
+  <li><strong>“An Introduction to S and the Hmisc and Design Libraries”</strong> by Carlos Alzola and Frank E. Harrell, especially of interest to SAS users,   users of the Hmisc or Design packages, or R users interested in data   manipulation, recoding, etc. (<a href="http://cran.r-project.org/doc/contrib/Alzola+Harrell-Hmisc-Design-Intro.pdf">PDF</a>) </li>
+  <li><strong>“Statistical Computing and Graphics Course Notes”</strong> by Frank   E. Harrell, includes material on S, LaTeX, reproducible research, making good   graphs, brief overview of computer languaes, etc. (<a href="http://cran.r-project.org/doc/contrib/Harrell-statcomp-notes.pdf">PDF</a>). </li>
+  <li><strong>“An Introduction to R: Software for Statistical Modelling &amp;   Computing” </strong>by Petra Kuhnert and Bill Venables (<a href="http://cran.r-project.org/doc/contrib/Kuhnert+Venables-R_Course_Notes.zip">ZIP 3.8MB</a>): A 360   page PDF document of lecture notes in combination with the data sets and R   scripts used in the manuscript. </li>
+  <li><strong>“Introduction to the R Project for Statistical Computing for Use at   the ITC” </strong>by David Rossiter (<a href="http://cran.r-project.org/doc/contrib/Rossiter-RIntro-ITC.pdf">PDF</a>). </li>
+  <li><strong>“Analysis of Epidemiological Data Using R and Epicalc”</strong> by   Virasakdi Chongsuvivatwong (<a href="http://cran.r-project.org/doc/contrib/Epicalc_Book.pdf">PDF</a>). </li>
+  <li><strong>“Statistics Using R with Biological Examples” </strong>by Kim   Seefeld and Ernst Linder (<a href="http://cran.r-project.org/doc/contrib/Seefeld_StatsRBio.pdf">PDF</a>). </li>
+</ul>
+<p>Documents with fewer than 100 pages: </p>
+<ul>
+  <li><strong>“R for Beginners”</strong> by Emmanuel Paradis (<a href="http://cran.r-project.org/doc/contrib/Paradis-rdebuts_en.pdf">PDF</a>). </li>
+  <li><strong>“Kickstarting R (version 1.6)”</strong> compiled by Jim Lemon, a   short introduction in English as HTML files: download as <a href="http://cran.r-project.org/doc/contrib/Lemon-kickstart_1.6.tgz">gzipped TAR</a> or <a href="http://cran.r-project.org/doc/contrib/Lemon-kickstart_1.6.zip">ZIP</a>; or <a href="http://cran.r-project.org/doc/contrib/Lemon-kickstart/l">browse directly</a>. </li>
+  <li><strong>“Notes on the use of R for psychology experiments and   questionnaires”</strong> by Jonathan Baron and Yuelin Li (<a href="http://cran.r-project.org/doc/contrib/Baron-rpsych.pdf">PDF</a>). A browsable version is available   at <a href="http://www.psych.upenn.edu/~baron/rpsych/rpsych.html">JB's   homepage</a>. </li>
+  <li><strong>“R for Windows Users (version 2.0)”</strong> by Ko-Kang Wang (<a href="http://cran.r-project.org/doc/contrib/Wang-WinBook.pdf">PDF</a>, <a href="http://cran.r-project.org/doc/contrib/Wang-WinBook.tar.gz">LaTeX source</a>). Updates, a Postscript   version and a <a href="http://www.stat.auckland.ac.nz/~kwan022/pub/R/WinBook/">browsable HTML   version</a> are available at <a href="http://www.stat.auckland.ac.nz/~kwan022/rinfo.php">KW's R Resources</a> page. </li>
+  <li><strong>“Building Microsoft Windows Versions of R and R packages under Intel   Linux”</strong> by Jun Yan and A. J. Rossini (<a href="http://cran.r-project.org/doc/contrib/cross-build.pdf">PDF</a>, associated <a href="http://cran.r-project.org/doc/contrib/Makefile-rcb">Makefile</a>). </li>
+  <li><strong>“A Guide for the Unwilling S User”</strong> by Patrick Burns (<a href="http://cran.r-project.org/doc/contrib/Burns-unwilling_S.pdf">PDF</a>). </li>
+  <li><strong>“The R language — a short companion”</strong> by Marc   Vandemeulebroecke (<a href="http://cran.r-project.org/doc/contrib/R_language.pdf">PDF</a>). </li>
+  <li><strong>“Fitting Distributions with R”</strong> by Vito Ricci (<a href="http://cran.r-project.org/doc/contrib/Ricci-distributions-en.pdf">PDF</a>). </li>
+  <li><strong>“Econometrics in R”</strong> by Grant Farnsworth (<a href="http://cran.r-project.org/doc/contrib/Farnsworth-EconometricsInR.pdf">PDF</a> | <a href="http://cran.r-project.org/doc/contrib/Farnsworth-EconometricsInR.tgz">LaTeX source</a>). </li>
+  <li><strong>“The Friendly Beginners' R Course”</strong> by Toby Marthews (<a href="http://cran.r-project.org/doc/contrib/Marthews-BeginnersRcourse.zip">ZIP</a>, 2007-03-01). </li>
+  <li><strong>“An R companion to ‘Experimental Design’ ”</strong> by Vikneswaran   (<a href="http://cran.r-project.org/doc/contrib/Vikneswaran-ED_companion.pdf">PDF</a>). </li>
+  <li><strong>“The R Guide”</strong> (version 2.3) by Jason Owen (<a href="http://cran.r-project.org/doc/contrib/Owen-TheRGuide.pdf">PDF</a>, 2007-08-09). </li>
+  <li><strong>“Multilevel Modeling in R”</strong> by Paul Bliese (<a href="http://cran.r-project.org/doc/contrib/Bliese_Multilevel.pdf">PDF</a>), a brief introduction to R and   the packages multilevel and nlme. </li>
+  <li><strong>“Statistics with R and S-Plus”</strong> by Hugo Quené (<a href="http://cran.r-project.org/doc/contrib/Quene.pdf">PDF</a>). </li>
+</ul>
+<p>Short Documents and Reference Cards: </p>
+<ul>
+  <li><strong>“R reference card”</strong> by Jonathan Baron (<a href="http://cran.r-project.org/doc/contrib/refcard.pdf">PDF</a>). </li>
+  <li><strong>“R and Octave”</strong> by Robin Hankin (<a href="http://cran.r-project.org/doc/contrib/R-and-octave.txt">Text</a>), a reference sheet translating   between the most common <a href="http://www.octave.org/">Octave</a> (or <a href="http://www.mathworks.com/">Matlab</a>) and R commands. </li>
+  <li>A <strong>“time series reference card”</strong> (<a href="http://cran.r-project.org/doc/contrib/Ricci-refcard-ts.pdf">PDF</a>) and a <strong>“regression   reference card”</strong> (<a href="http://cran.r-project.org/doc/contrib/Ricci-refcard-regression.pdf">PDF</a>) by Vito Ricci. </li>
+  <li><strong>“R reference card”</strong> by Tom Short ( <a href="http://cran.r-project.org/doc/contrib/Short-refcard.pdf">PDF</a>, <a href="http://cran.r-project.org/doc/contrib/Short-refcard.zip">LaTeX source</a> ). </li>
+</ul>
+</fieldset>
+<fieldset>
+<legend>Web Resources </legend>
+<ul>
+  <li>Quick-R by <a href="http://www.statmethods.net/about/author.html" target="_blank">Robert I. Kabacoff</a>: <a href="http://www.statmethods.net">http://www.statmethods.net</a><br />
+#I believe this is a very good web site for R novices; it has covered both basic and advanced knowledge for R computations and graphics. </li>
+</ul>
+</fieldset>
+</div>
+<!-- InstanceEndEditable --></div></div>
+<!-- InstanceBeginRepeat name="footer" --><!-- InstanceBeginRepeatEntry -->
+<div id=footwrap>
+<div id="footer">Copyright &copy;  2007 by <a href="http://www.yihui.name/cv/" target="_blank">Yihui XIE</a> from Beijing, China.
+      Created on Oct 6, 2007; Last updated on 
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+
+var m_names = new Array("Jan", "Feb", "Mar", 
+"Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+"Oct", "Nov", "Dec");
+
+var d = new Date(document.lastModified);
+var curr_date = d.getDate();
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+document.write(m_names[curr_month] + " " + curr_date + ", " + curr_year);
+
+//-->
+</SCRIPT>
+<br />
+Recommended resolution: 1280*1024; Web browser: Firefox; <a href="http://www.yihui.name/en/guestbook.php" title="Leave a message to me in my guestbook" target="_blank">Feedbacks</a> are most welcome. </div>
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+</body>
+<!-- InstanceEnd --></html>

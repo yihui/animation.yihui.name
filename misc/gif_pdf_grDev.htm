@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/r_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Animation Tricks: Animated Statistics Using R -- Yihui XIE</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../css.css" rel="stylesheet" type="text/css" />
+<link href="../r.css" rel="stylesheet" type="text/css" />
+<link href="../favicon.ico" rel="shortcut icon" />
+<script language="JavaScript" type="text/javascript" src="../fun.js"></script>
+<meta name="Keywords" content="animations, statistics, R, Yihui Xie, R Graphics, grid graphics, Theory of Probability, Mathematical Statistics, Linear Models, Nonparametric Statistics, Time Series, Multivariate Statistics, Numerical Optimization, Data Mining, Machine Learning" />
+<meta name="Description" content="Animated Statistics Using R: a web site for animations in the illustration of statistical theories, methods and applications. (by Yihui XIE)" />
+<meta name="Author" content="Yihui XIE" />
+</head>
+
+<body>
+<!-- InstanceBeginRepeat name="header" --><!-- InstanceBeginRepeatEntry -->
+<div id="header">
+<div id="logo"><img src="../images/banner.png" width="600" height="100" align="left" />
+<pre class="hl" style="margin: 0px; border: none; padding: 0px; background-color: #FFF8DC"><span class="hl kwa">for</span> <span class="hl sym">(</span>i <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl sym">:</span><span class="hl num">360</span><span class="hl sym">) {</span>
+    <span class="hl kwc">plot</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> ann <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">,</span> type <span class="hl sym">=</span> <span class="hl str">&quot;n&quot;</span><span class="hl sym">,</span> axes <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">)</span>
+    <span class="hl kwc">text</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> <span class="hl num">1</span><span class="hl sym">,</span> <span class="hl str">&quot;Animation&quot;</span><span class="hl sym">,</span> srt <span class="hl sym">=</span> i<span class="hl sym">,</span> <span class="hl kwc">col</span> <span class="hl sym">=</span>
+        <span class="hl kwc">rainbow</span><span class="hl sym">(</span><span class="hl num">360</span><span class="hl sym">)[</span>i<span class="hl sym">],</span> cex <span class="hl sym">=</span> <span class="hl num">7</span> <span class="hl sym">*</span> i<span class="hl sym">/</span><span class="hl num">360</span><span class="hl sym">)</span>
+    <span class="hl kwc">Sys.sleep</span><span class="hl sym">(</span><span class="hl num">0.01</span><span class="hl sym">)}</span>
+</pre></div>
+</div>
+<div id="title">Animated Statistics Using R <font color="#FF0000">(to be moved to <a href="http://animation.yihui.name" title="http://animation.yihui.name" target="_blank">AniWiki</a>!)</font> </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<div id="mainwrap">
+<div id="wrapper">
+<!-- InstanceBeginRepeat name="navigation" --><!-- InstanceBeginRepeatEntry -->
+  <div id="nav" >
+    <ul>
+      <li><a href="../">Home</a></li>
+      <li><a href="../news/">What's New</a> </li>
+      <li><a href="../intro/">Introduction to R</a>
+        <ul>
+          <li><a href="../intro/install/">Installation</a></li>
+            <li><a href="../intro/documentations/">Documentations</a></li>
+          </ul>
+      </li>
+      <li><a href="../gr/">R Graphics
+        </a>
+        <ul>
+          <li><a href="../gr/elements/">Elements</a></li>
+          <li><a href="../gr/graphics/">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">graphics</font></a></li>
+          <li><a href="../gr/animation/" title="Introduction to the package 'animation'">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">animation</font></a> </li>
+          </ul>
+      </li>
+      <li><a href="../stat/">Animated Statistics
+        </a>
+        <ul>
+          <li><a href="../stat/probability/">Theory of Probability</a></li>
+          <li><a href="../stat/sampling_survey/">Sampling Survey</a> </li>
+          <li>Mathematical Stat.</li>
+          <li>Linear Models</li>
+          <li>Nonparametric Stat.</li>
+          <li>Time Series Analysis </li>
+          <li><a href="../stat/multivariate_stat/">Multivariate Stat.</a></li>
+          <li><a href="../stat/computational_stat/">Computational Stat.</a> </li>
+          <li>Data Mining</li>
+          <li><a href="../stat/machine_learning/">Machine Learning</a> </li>
+        </ul>
+      </li>
+      <li><a href="./">Miscellanea
+        </a>
+        <ul>
+          <li><a href="gif_pdf_grDev.htm" title="Different file formats that can be probably used in animations">Animation Tricks</a></li>
+          <li><a href="java.htm" title="How to make better animations using JavaScript">JavaScript Details</a> </li>
+          <li><a href="highlight.htm" title="Highlight R code using software &quot;Highlight&quot; by Andre Simon">Highlight R Code</a></li>
+          <li><a href="ideas.htm">Ideas</a> </li>
+          <li><a href="credits.htm">Credits</a></li>
+          <li><a href="../news/feed.xml">RSS Feed</a> </li>
+        </ul>
+      </li>
+      </ul>
+  </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+
+<!-- InstanceBeginEditable name="body" -->
+<div id="main">
+<div id="maintitle">It's difficult for me to choose an appropriate device for animated pictures. At last I turned to HTML &amp; JavaScript. </div>
+<fieldset>
+<legend>About GIF Format </legend>
+<p>I've read some stories on the GIF format since a long time ago, among which the instruction from GNU (<a href="http://www.gnu.org/philosophy/gif.html" target="_blank">Why There Are No <acronym title="Graphics Interchange Format">GIF</acronym> files on GNU Web Pages</a>) and the website &quot;<a href="http://burnallgifs.org/archives/" target="_blank">Burn All GIFs</a>&quot; impressed me most.</p>
+<p>Although <a href="http://lpf.ai.mit.edu/Patents/Gif/Gif.html" target="_blank">the patent for GIF has already expired</a> in the USA, Canada, Japan, and the      European Union till now, I still have some fear about it. Anyway, we can ultimately use it legally now. For this site, it's  inevitable to make use of a certain kind of image format (or video format), and surely GIF may be one of the available choices. </p>
+<p>However, currently it doesn't seem to be easy to create GIF animations using R conveniently. To the best of my knowledge, I only know there are two functions <em>read.gif()</em> and <em>write.gif()</em> in the package &quot;<a href="http://cran.r-project.org/src/contrib/Descriptions/caTools.html" target="_blank" class="mono"><acronym title="Miscellaneous tools: I/O, moving window statistics, etc.">caTools</acronym></a>&quot; which are able to deal with images in GIF format. The most critical limitation is that this package treats GIF images as  2D matrices (or 3D arrays when images contain several frames, i.e. animated), which restricted the use of GIF format to a quite small area, or more clearly speaking, <em>only</em> <a href="http://finzi.psych.upenn.edu/R/library/graphics/html/image.html" target="_blank">color images</a> can be used -- for a matrix named <span class="mono">image</span>, the columns and rows determine <em>where</em> to draw, while the value <span class="mono">image[i, j]</span> determine <em>which color</em> to use. </p>
+<p>Sure, what we need is to <em>combine</em> several images together and specify a certain time delay to constitute an animated image. Thus the package &quot;<span class="mono">caTools</span>&quot; is not appropriate for a <em>general</em> purpose of making animations. In fact I've communicated with Jarek Tuszynski who is the author of &quot;<span class="mono">caTools</span>&quot;, and he didn't want to expand his functions to a general purpose of dealing with GIF images. Therefore, we can only limit GIF animations using <em>write.gif()</em> from &quot;<span class="mono">caTools</span>&quot; to the quite narrow field, i.e. producing animated color images. </p>
+<p>Currently what I can do about this format is to make use of a special software &quot;<a href="http://www.imagemagick.org" target="_blank">ImageMagick</a>&quot; to <a href="http://www.imagemagick.org/script/convert.php" target="_blank">convert</a> several animation frames into a single GIF file, and this idea has been implemented in the function <a href="http://finzi.psych.upenn.edu/R/library/animation/html/saveMovie.html" target="_blank"><em>saveMovie()</em></a> in my package <span class="mono">animation</span>. </p>
+</fieldset>
+<fieldset>
+<legend>PDF Documents </legend>
+<p><img src="http://www.adobe.com/images/shared/download_buttons/get_adobe_reader.gif" width="112" height="33" hspace="10" align="right" />The <acronym title="Portable Document Format">PDF</acronym>  is the file format created by Adobe Systems in 1993 for document exchange. PDF is used for representing two-dimensional documents in a device-independent and display resolution-independent fixed-layout document format. Usually PDF files are my favorite when generating statistical figures, because vector plots are certainly superior to bitmaps for graphics in statistics due to the special characteristic of <em>statistical</em> graphs (there are usually  numbers &quot;behind&quot; images). </p>
+<p>&quot;Then, does PDF has anything to do with animations?&quot; You may ask. The answer is &quot;Yes&quot;! My idea is as follows:</p>
+<p>First creat a sequence of plots in a single PDF device using <em>pdf()</em> in package <span class="mono">grDevices</span> (you need to specify the argument <span class="mono">onefile = TRUE</span>, but this is the default value, so you may ignore it), and the rest work is easy. Either of the following two approaches will do: (1) Open the PDF file and view it in <em>fullscreen</em> mode, then press PageDown again and again with an appropriate time delay to enjoy a <em>manual</em> animation (seems silly...); (2) If you have installed Adobe Acrobat Professional in your computer, just set proper <em>auto filp time interval</em> of pages (Document -&gt; Pages -&gt; Set Page Transitions), then play your PDF file in fullscreen mode. </p>
+<p>However, the first method is apparently somewhat silly and inconvenient, while the second one need an expensive shareware. As a result, making animations through the way of PDF documents is unrealistic to some degree. </p>
+</fieldset>
+<fieldset>
+<legend>Other R Graphics Devices</legend>
+<p>The R package <span class="mono">grDevices</span> has offered a variety of graphics devices, and it's really a great help when we need to produce <em>single</em> image files -- there are several choices such as PNG, JPEG, BMP, PDF, PS, TeX/LaTeX and WMF, etc. All of them work very well when producing images files one by one, but the essential problem is still that none of them is able to make animations <em>directly</em>. At most what we can do is to produce a sequence of images; it's difficult to animate them by R alone. </p>
+<p>Nevertheless, what I used most in the past are just Windows graphics devices (under Windows XP) or X Window System graphics devices (under <a href="http://www.ubuntu.com/" target="_blank"><acronym title="Ubuntu is a community developed, linux-based operating system that is perfect for laptops, desktops and servers.">Ubuntu</acronym></a>) inside R to make animations. Again, there is an obvious drawback: it's inconvenient for users who don't have R installed in their computers to watch the animations, as the pictures are displayed <em>inside</em> R and we need an independent media to show our animations. </p>
+<p>For users who have installed R, you may easily make animations just using <em>Sys.sleep()</em> in a loop, as what I did on top of this page. Obviously, I intentionally used <em>Sys.sleep()</em> to make the loop to run more slowly so that we can see the whole process clearly. (Note that such a way of animation can <em>only</em> be implemented in a Windows graphics device or X Window System graphics device in side R.) </p>
+</fieldset>
+<fieldset>
+<legend>HTML and JavaScript </legend>
+<p>So... After my boring introduction to my previous trials, now I'll give my last solution: to use HTML with the help of JavaScript to complete the illustration. </p>
+<p>Why use HTML &amp; JavaScript? I believe there are at least three reasons: (1) R already has functions for reading and writing ASCII files, so we can create HTML files easily, e.g. use <em>cat()</em>; (2) Although R has no devices for GIF, there are still many other &quot;static&quot; graphics formats which can be well shown in web pages; (3) Generally speaking, no additional  programs are needed in order to display the animations, as long as you have a web browser that supports JavaScript -- I believe most computers can meet such a simple requirement. </p>
+<p>And how? Below is some sample code: </p>
+<pre class="hl"><span class="hl kwa">&lt;body</span> onload=<span class="hl str">&quot;displayImage()&quot;</span>&gt;
+<span class="hl kwa">&lt;img</span> id=<span class="hl str">&quot;myimg&quot;</span> src=<span class="hl str">&quot;&quot;</span>/&gt;
+<span class="hl sym">&lt;</span>script <span class="hl kwc">language</span><span class="hl sym">=</span><span class="hl str">&quot;javascript&quot;</span><span class="hl sym">&gt;</span>
+    <span class="hl kwa">var</span> imglist <span class="hl sym">=</span> <span class="hl kwa">new</span> <span class="hl kwc">Array</span><span class="hl sym">(</span><span class="hl str">&quot;plot1.png&quot;</span><span class="hl sym">,</span> <span class="hl str">&quot;plot2.png&quot;</span><span class="hl sym">,</span> <span class="hl str">&quot;plot3.png&quot;</span><span class="hl sym">,</span> <span class="hl str">&quot;plot4.png&quot;</span><span class="hl sym">);</span>
+    <span class="hl kwa">var</span> n <span class="hl sym">= -</span><span class="hl num">1</span><span class="hl sym">;</span>
+    <span class="hl kwa">function</span> <span class="hl kwd">displayImage</span><span class="hl sym">() {</span>
+        <span class="hl sym">++</span>n<span class="hl sym">;</span>
+        <span class="hl kwa">if</span> <span class="hl sym">(</span>n <span class="hl sym">==</span> imglist<span class="hl sym">.</span><span class="hl kwc">length</span><span class="hl sym">)</span>
+           n <span class="hl sym">=</span> <span class="hl num">0</span><span class="hl sym">;</span>
+        <span class="hl kwc">document</span><span class="hl sym">.</span><span class="hl kwc">all</span><span class="hl sym">(</span><span class="hl str">&quot;myimg&quot;</span><span class="hl sym">).</span><span class="hl kwc">src</span> <span class="hl sym">=</span> imglist<span class="hl sym">[</span>n<span class="hl sym">];</span>
+        <span class="hl kwc">setTimeout</span><span class="hl sym">(</span><span class="hl str">&quot;displayImage()&quot;</span><span class="hl sym">,</span><span class="hl num">1000</span><span class="hl sym">);</span> <span class="hl slc">//every 1 seconds</span>
+    <span class="hl sym">}</span>
+<span class="hl sym">&lt;/</span>script<span class="hl sym">&gt;</span>
+<span class="hl kwa">&lt;/body&gt;</span>
+</pre>
+<p>We just have to define an array of images and then change the <span class="mono">src</span> attribute of the <span class="mono">img</span> tag, in the mean time, we should specify a time interval for the display function. In the end, we can freely use animations in web pages! All details are in <a href="java.htm">this page</a> (there are several modifications in order to improve the quality of animations). </p>
+</fieldset>
+<fieldset>
+<legend>Any More Ideas?</legend>
+<p>I'd like to listen to other ideas on how to make animations using R conveniently. If you have one (or some), please share it (them) with me. Thanks! </p>
+</fieldset>
+</div>
+<!-- InstanceEndEditable --></div></div>
+<!-- InstanceBeginRepeat name="footer" --><!-- InstanceBeginRepeatEntry -->
+<div id=footwrap>
+<div id="footer">Copyright &copy;  2007 by <a href="http://www.yihui.name/cv/" target="_blank">Yihui XIE</a> from Beijing, China.
+      Created on Oct 6, 2007; Last updated on 
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+
+var m_names = new Array("Jan", "Feb", "Mar", 
+"Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+"Oct", "Nov", "Dec");
+
+var d = new Date(document.lastModified);
+var curr_date = d.getDate();
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+document.write(m_names[curr_month] + " " + curr_date + ", " + curr_year);
+
+//-->
+</SCRIPT>
+<br />
+Recommended resolution: 1280*1024; Web browser: Firefox; <a href="http://www.yihui.name/en/guestbook.php" title="Leave a message to me in my guestbook" target="_blank">Feedbacks</a> are most welcome. </div>
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+</body>
+<!-- InstanceEnd --></html>

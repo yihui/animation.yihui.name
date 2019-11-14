@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/r_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>the Bisection Method for Root-finding on an Interval: Animated Statistics Using R -- Yihui XIE</title>
+<script language="JavaScript" type="text/javascript" src="../../../fun.js"></script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../../css.css" rel="stylesheet" type="text/css" />
+<link href="../../../r.css" rel="stylesheet" type="text/css" />
+<link href="../../../favicon.ico" rel="shortcut icon" />
+<script language="JavaScript" type="text/javascript" src="../../../fun.js"></script>
+<meta name="Keywords" content="animations, statistics, R, Yihui Xie, R Graphics, grid graphics, Theory of Probability, Mathematical Statistics, Linear Models, Nonparametric Statistics, Time Series, Multivariate Statistics, Numerical Optimization, Data Mining, Machine Learning" />
+<meta name="Description" content="Animated Statistics Using R: a web site for animations in the illustration of statistical theories, methods and applications. (by Yihui XIE)" />
+<meta name="Author" content="Yihui XIE" />
+</head>
+
+<body>
+<!-- InstanceBeginRepeat name="header" --><!-- InstanceBeginRepeatEntry -->
+<div id="header">
+<div id="logo"><img src="../../../images/banner.png" width="600" height="100" align="left" />
+<pre class="hl" style="margin: 0px; border: none; padding: 0px; background-color: #FFF8DC"><span class="hl kwa">for</span> <span class="hl sym">(</span>i <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl sym">:</span><span class="hl num">360</span><span class="hl sym">) {</span>
+    <span class="hl kwc">plot</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> ann <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">,</span> type <span class="hl sym">=</span> <span class="hl str">&quot;n&quot;</span><span class="hl sym">,</span> axes <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">)</span>
+    <span class="hl kwc">text</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> <span class="hl num">1</span><span class="hl sym">,</span> <span class="hl str">&quot;Animation&quot;</span><span class="hl sym">,</span> srt <span class="hl sym">=</span> i<span class="hl sym">,</span> <span class="hl kwc">col</span> <span class="hl sym">=</span>
+        <span class="hl kwc">rainbow</span><span class="hl sym">(</span><span class="hl num">360</span><span class="hl sym">)[</span>i<span class="hl sym">],</span> cex <span class="hl sym">=</span> <span class="hl num">7</span> <span class="hl sym">*</span> i<span class="hl sym">/</span><span class="hl num">360</span><span class="hl sym">)</span>
+    <span class="hl kwc">Sys.sleep</span><span class="hl sym">(</span><span class="hl num">0.01</span><span class="hl sym">)}</span>
+</pre></div>
+</div>
+<div id="title">Animated Statistics Using R <font color="#FF0000">(to be moved to <a href="http://animation.yihui.name" title="http://animation.yihui.name" target="_blank">AniWiki</a>!)</font> </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<div id="mainwrap">
+<div id="wrapper">
+<!-- InstanceBeginRepeat name="navigation" --><!-- InstanceBeginRepeatEntry -->
+  <div id="nav" >
+    <ul>
+      <li><a href="../../../">Home</a></li>
+      <li><a href="../../../news/">What's New</a> </li>
+      <li><a href="../../../intro/">Introduction to R</a>
+        <ul>
+          <li><a href="../../../intro/install/">Installation</a></li>
+            <li><a href="../../../intro/documentations/">Documentations</a></li>
+          </ul>
+      </li>
+      <li><a href="../../../gr/">R Graphics
+        </a>
+        <ul>
+          <li><a href="../../../gr/elements/">Elements</a></li>
+          <li><a href="../../../gr/graphics/">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">graphics</font></a></li>
+          <li><a href="../../../gr/animation/" title="Introduction to the package 'animation'">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">animation</font></a> </li>
+          </ul>
+      </li>
+      <li><a href="../../">Animated Statistics
+        </a>
+        <ul>
+          <li><a href="../../probability/">Theory of Probability</a></li>
+          <li><a href="../../sampling_survey/">Sampling Survey</a> </li>
+          <li>Mathematical Stat.</li>
+          <li>Linear Models</li>
+          <li>Nonparametric Stat.</li>
+          <li>Time Series Analysis </li>
+          <li><a href="../../multivariate_stat/">Multivariate Stat.</a></li>
+          <li><a href="../">Computational Stat.</a> </li>
+          <li>Data Mining</li>
+          <li><a href="../../machine_learning/">Machine Learning</a> </li>
+        </ul>
+      </li>
+      <li><a href="../../../misc/">Miscellanea
+        </a>
+        <ul>
+          <li><a href="../../../misc/gif_pdf_grDev.htm" title="Different file formats that can be probably used in animations">Animation Tricks</a></li>
+          <li><a href="../../../misc/java.htm" title="How to make better animations using JavaScript">JavaScript Details</a> </li>
+          <li><a href="../../../misc/highlight.htm" title="Highlight R code using software &quot;Highlight&quot; by Andre Simon">Highlight R Code</a></li>
+          <li><a href="../../../misc/ideas.htm">Ideas</a> </li>
+          <li><a href="../../../misc/credits.htm">Credits</a></li>
+          <li><a href="../../../news/feed.xml">RSS Feed</a> </li>
+        </ul>
+      </li>
+      </ul>
+  </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+
+<!-- InstanceBeginEditable name="body" -->
+<div id="main">
+<div id="maintitle">the Bisection Method for Root-finding on an Interval </div>
+<fieldset>
+<legend>Ideas</legend>
+<p>In mathematics, the bisection method is a root-finding algorithm which works by   repeatedly dividing an interval in half and then selecting the subinterval in   which a root exists.</p>
+</fieldset>
+<fieldset>
+<legend>Implementations in R</legend>
+<p>There's a function <em>bisection.method()</em> in the package <span class="mono">animation</span> for the demonstration of the Bisection Method for Root-finding on an Interval. </p>
+</fieldset>
+<fieldset>
+<legend>Animations for the Bisection Method </legend>
+<div align="center" id="divDemo">
+<div id="loading">loading animation frames...</div>
+<div id="divPreload">
+<script language="JavaScript" type="text/javascript">
+var nmax = 16
+var ht = 500
+for(i = 1; i <= nmax; i++){
+	document.write("<div id=\"divPreload" + i + "\"><img src=\"images/" + i + ".png\" /></div>")
+}
+</script>
+</div>
+</div>
+<div style="border: solid 1px #FF0000; margin-top: 20px; height: 20px;" title="Speed">
+<div id="percent" style="width: 80%">80%</div>
+</div>
+<div id="divControl">
+<input type="button" disabled="disabled" id="btnBegin" onclick="displayImage()" value="Begin"/>
+<input type="button" disabled="disabled" id="btnFaster" onclick="fasterImage(-0.1)" value="Faster"/>
+<input type="button" disabled="disabled" id="btnSlower" onclick="fasterImage(0.1)" value="Slower"/>
+<input type="button" disabled="disabled" id="btnStop" onclick="stopImage()" value="Stop "/> 
+Time Interval: <label id="lbl">1</label> seconds; <label id="lblImage"></label>
+</div>
+</fieldset>
+</div>
+<!-- InstanceEndEditable --></div></div>
+<!-- InstanceBeginRepeat name="footer" --><!-- InstanceBeginRepeatEntry -->
+<div id=footwrap>
+<div id="footer">Copyright &copy;  2007 by <a href="http://www.yihui.name/cv/" target="_blank">Yihui XIE</a> from Beijing, China.
+      Created on Oct 6, 2007; Last updated on 
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+
+var m_names = new Array("Jan", "Feb", "Mar", 
+"Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+"Oct", "Nov", "Dec");
+
+var d = new Date(document.lastModified);
+var curr_date = d.getDate();
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+document.write(m_names[curr_month] + " " + curr_date + ", " + curr_year);
+
+//-->
+</SCRIPT>
+<br />
+Recommended resolution: 1280*1024; Web browser: Firefox; <a href="http://www.yihui.name/en/guestbook.php" title="Leave a message to me in my guestbook" target="_blank">Feedbacks</a> are most welcome. </div>
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+</body>
+<!-- InstanceEnd --></html>

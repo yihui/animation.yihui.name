@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/r_temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>R Installation: Animated Statistics Using R -- Yihui XIE</title>
+<script language="JavaScript" type="text/javascript" src="../../fun.js"></script>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../css.css" rel="stylesheet" type="text/css" />
+<link href="../../r.css" rel="stylesheet" type="text/css" />
+<link href="../../favicon.ico" rel="shortcut icon" />
+<script language="JavaScript" type="text/javascript" src="../../fun.js"></script>
+<meta name="Keywords" content="animations, statistics, R, Yihui Xie, R Graphics, grid graphics, Theory of Probability, Mathematical Statistics, Linear Models, Nonparametric Statistics, Time Series, Multivariate Statistics, Numerical Optimization, Data Mining, Machine Learning" />
+<meta name="Description" content="Animated Statistics Using R: a web site for animations in the illustration of statistical theories, methods and applications. (by Yihui XIE)" />
+<meta name="Author" content="Yihui XIE" />
+</head>
+
+<body>
+<!-- InstanceBeginRepeat name="header" --><!-- InstanceBeginRepeatEntry -->
+<div id="header">
+<div id="logo"><img src="../../images/banner.png" width="600" height="100" align="left" />
+<pre class="hl" style="margin: 0px; border: none; padding: 0px; background-color: #FFF8DC"><span class="hl kwa">for</span> <span class="hl sym">(</span>i <span class="hl kwa">in</span> <span class="hl num">1</span><span class="hl sym">:</span><span class="hl num">360</span><span class="hl sym">) {</span>
+    <span class="hl kwc">plot</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> ann <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">,</span> type <span class="hl sym">=</span> <span class="hl str">&quot;n&quot;</span><span class="hl sym">,</span> axes <span class="hl sym">=</span> <span class="hl kwb">F</span><span class="hl sym">)</span>
+    <span class="hl kwc">text</span><span class="hl sym">(</span><span class="hl num">1</span><span class="hl sym">,</span> <span class="hl num">1</span><span class="hl sym">,</span> <span class="hl str">&quot;Animation&quot;</span><span class="hl sym">,</span> srt <span class="hl sym">=</span> i<span class="hl sym">,</span> <span class="hl kwc">col</span> <span class="hl sym">=</span>
+        <span class="hl kwc">rainbow</span><span class="hl sym">(</span><span class="hl num">360</span><span class="hl sym">)[</span>i<span class="hl sym">],</span> cex <span class="hl sym">=</span> <span class="hl num">7</span> <span class="hl sym">*</span> i<span class="hl sym">/</span><span class="hl num">360</span><span class="hl sym">)</span>
+    <span class="hl kwc">Sys.sleep</span><span class="hl sym">(</span><span class="hl num">0.01</span><span class="hl sym">)}</span>
+</pre></div>
+</div>
+<div id="title">Animated Statistics Using R <font color="#FF0000">(to be moved to <a href="http://animation.yihui.name" title="http://animation.yihui.name" target="_blank">AniWiki</a>!)</font> </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+<div id="mainwrap">
+<div id="wrapper">
+<!-- InstanceBeginRepeat name="navigation" --><!-- InstanceBeginRepeatEntry -->
+  <div id="nav" >
+    <ul>
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../news/">What's New</a> </li>
+      <li><a href="../">Introduction to R</a>
+        <ul>
+          <li><a href="./">Installation</a></li>
+            <li><a href="../documentations/">Documentations</a></li>
+          </ul>
+      </li>
+      <li><a href="../../gr/">R Graphics
+        </a>
+        <ul>
+          <li><a href="../../gr/elements/">Elements</a></li>
+          <li><a href="../../gr/graphics/">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">graphics</font></a></li>
+          <li><a href="../../gr/animation/" title="Introduction to the package 'animation'">Package <font face="Bitstream Vera Sans Mono, Courier New, monospace">animation</font></a> </li>
+          </ul>
+      </li>
+      <li><a href="../../stat/">Animated Statistics
+        </a>
+        <ul>
+          <li><a href="../../stat/probability/">Theory of Probability</a></li>
+          <li><a href="../../stat/sampling_survey/">Sampling Survey</a> </li>
+          <li>Mathematical Stat.</li>
+          <li>Linear Models</li>
+          <li>Nonparametric Stat.</li>
+          <li>Time Series Analysis </li>
+          <li><a href="../../stat/multivariate_stat/">Multivariate Stat.</a></li>
+          <li><a href="../../stat/computational_stat/">Computational Stat.</a> </li>
+          <li>Data Mining</li>
+          <li><a href="../../stat/machine_learning/">Machine Learning</a> </li>
+        </ul>
+      </li>
+      <li><a href="../../misc/">Miscellanea
+        </a>
+        <ul>
+          <li><a href="../../misc/gif_pdf_grDev.htm" title="Different file formats that can be probably used in animations">Animation Tricks</a></li>
+          <li><a href="../../misc/java.htm" title="How to make better animations using JavaScript">JavaScript Details</a> </li>
+          <li><a href="../../misc/highlight.htm" title="Highlight R code using software &quot;Highlight&quot; by Andre Simon">Highlight R Code</a></li>
+          <li><a href="../../misc/ideas.htm">Ideas</a> </li>
+          <li><a href="../../misc/credits.htm">Credits</a></li>
+          <li><a href="../../news/feed.xml">RSS Feed</a> </li>
+        </ul>
+      </li>
+      </ul>
+  </div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+
+<!-- InstanceBeginEditable name="body" -->
+<div id="main">
+<div id="maintitle">Let's get started from here! </div>
+<fieldset>
+<legend>Obtaining R from CRAN </legend>
+<p>We can obtain either R source or binaries from CRAN (the Comprehensive R Archive Network) mirrors: <a href="http://cran.r-project.org/mirrors.html" target="_blank">http://cran.r-project.org/mirrors.html</a></p>
+<p>Take the mirror at <a href="http://cran.cnr.berkeley.edu/" target="_blank">UC Berkeley</a> for example. You can see recompiled binary distributions of the base system and contributed packages in this list for different operating systems: </p>
+<ul>
+  <li><a href="http://cran.cnr.berkeley.edu/bin/linux/" target="_blank">Linux</a> </li>
+  <li><a href="http://cran.cnr.berkeley.edu/bin/macosx/" target="_blank">MacOS X</a> </li>
+  <li><a href="http://cran.cnr.berkeley.edu/bin/windows/" target="_blank">Windows (95 and later)</a> </li>
+</ul>
+<p>Windows users just have to click <a href="http://cran.cnr.berkeley.edu/bin/windows/" target="_blank">Windows (95 and later)</a> and select the <a href="http://cran.cnr.berkeley.edu/bin/windows/base/" target="_blank">base</a> directory, then download the file &quot;R-*.*.*-win32.exe&quot; (this is the setup program) and install it into your PC.</p>
+<p>We may also get the source code and compile by ourselves, then just download the &quot;R-*.*.*.tar.gz&quot;. Next I'll give a brief introduction to the compilation under Windows. </p>
+</fieldset>
+<fieldset>
+<legend>Building from Source under Windows </legend>
+<p>For detailed steps, please refer to Chapter 3 of &quot;<a href="http://cran.r-project.org/doc/manuals/R-admin.html" target="_blank">R Installation and Administration</a>&quot;. The basic steps are:</p>
+<ol>
+  <li>Download the &quot;Windows Toolset&quot; from <a href="http://www.murdoch-sutherland.com/Rtools/" target="_blank">http://www.murdoch-sutherland.com/Rtools/</a>; Install <a href="http://www.murdoch-sutherland.com/Rtools/Rtools.exe" target="_blank">Rtools.exe</a> as well as <a href="http://msdn.microsoft.com/library/en-us/htmlhelp/html/hwmicrosofthtmlhelpdownloads.asp" target="_blank">Microsoft's HTML Help Workshop</a>, <a href="http://www.miktex.org/" target="_blank">MikTeX</a>, and <a href="http://jrsoftware.org/isdl.php" target="_blank">InnoSetup installer</a>. Follow the <em>default</em> paths if you don't know where to install, e.g. install Rtools to &quot;<span class="mono">C:\Rtools</span>&quot;, and set <span class="mono">R_HOME</span> to &quot;<span class="mono">C:\R</span>&quot;. </li>
+  <li>Download R souce code, e.g. from <a href="http://cran.cnr.berkeley.edu/src/base/R-2/R-2.6.0.tar.gz">http://cran.cnr.berkeley.edu/src/base/R-2/R-2.6.0.tar.gz</a>; put it under <span class="mono">R_HOME</span> and open a command window (Start --&gt; Run; <span class="mono">cmd</span>); extract files by <span class="mono">tar zxvf R-2.6.0.tar.gz</span>; now all the R source files are under &quot;<span class="mono">C:\R\R-2.6.0</span>&quot;; go to the directory &quot;<span class="mono">C:\R\R-2.6.0\src\gnuwin32</span>&quot; by <span class="mono">cd</span> command.</li>
+  <li>Here is an important step which  acutally should have been trivial, however, as we extracted source files to &quot;<span class="mono">C:\R\R-2.6.0</span>&quot; instead of &quot;<span class="mono">C:\R</span>&quot;, we need to copy two directories &quot;<span class="mono">src</span>&quot; and &quot;<span class="mono">Tcl</span>&quot; under &quot;<span class="mono">C:\R</span>&quot; to &quot;<span class="mono">C:\R\R-2.6.0</span>&quot; (&quot;override&quot; the existing ones!). I was puzzled at this problem caused by extraction the first time I compiled R souce code under Windows... a poor &amp; silly Windows user... </li>
+  <li>Check the file &quot;<span class="mono">MkRules</span>&quot; to make sure all the paths have been correctly specified, e.g. path for InnoSetup &quot;<span class="mono">C:/Program Files/Inno Setup 5</span>&quot;, etc. </li>
+  <li>Now we can begin the compilation by <span class="mono">make all recommended</span>. Then<br /> 
+    <span class="mono">make bitmapdll<br />
+    make check-all<br /> 
+     make manuals<br /> 
+     make distribution<br /> 
+     make check-all</span><br /> 
+     Done! Under the directory &quot;<span class="mono">cran</span>&quot; you can find the executable setup program &quot;R-*.*.*-win32.exe&quot;. <br />
+  </li>
+</ol>
+<p>Here is a screenshot of my compilation process: </p>
+<div align="center"><img src="images/make.png" alt="Building from R Source under Windows" width="483" height="318" title="Building from R Source under Windows" /></div>
+</fieldset>
+<fieldset>
+<legend>Contributed Packages </legend>
+<p>If you want to install packages from source, you need to know the usage of <span class="mono">R CMD install</span> first, otherwise the simple function <a href="http://finzi.psych.upenn.edu/R/library/utils/html/update.packages.html" target="_blank"><em>install.packages()</em></a> in R is enough. Actually I'd like to recommend you to know further knowledge about R packages, including both the building and installation. The <span class="mono">R CMD</span> series are helpful for us, such as: </p>
+<p class="mono">R CMD build</p>
+<p class="mono">R CMD check</p>
+<p class="mono">R CMD install</p>
+<p>As there are already many documents focusing on this topic, I'll not make redundant efforts here. Refer to <a href="http://gsbwww.uchicago.edu/fac/peter.rossi/research/bayes%20book/bayesm/Making%20R%20Packages%20Under%20Windows.pdf">&quot;Making R Packages Under Windows&quot;</a> if you are interested. </p>
+</fieldset>
+</div>
+<!-- InstanceEndEditable --></div></div>
+<!-- InstanceBeginRepeat name="footer" --><!-- InstanceBeginRepeatEntry -->
+<div id=footwrap>
+<div id="footer">Copyright &copy;  2007 by <a href="http://www.yihui.name/cv/" target="_blank">Yihui XIE</a> from Beijing, China.
+      Created on Oct 6, 2007; Last updated on 
+<SCRIPT LANGUAGE="JAVASCRIPT">
+<!--
+
+var m_names = new Array("Jan", "Feb", "Mar", 
+"Apr", "May", "Jun", "Jul", "Aug", "Sep", 
+"Oct", "Nov", "Dec");
+
+var d = new Date(document.lastModified);
+var curr_date = d.getDate();
+var curr_month = d.getMonth();
+var curr_year = d.getFullYear();
+document.write(m_names[curr_month] + " " + curr_date + ", " + curr_year);
+
+//-->
+</SCRIPT>
+<br />
+Recommended resolution: 1280*1024; Web browser: Firefox; <a href="http://www.yihui.name/en/guestbook.php" title="Leave a message to me in my guestbook" target="_blank">Feedbacks</a> are most welcome. </div>
+</div>
+<!-- InstanceEndRepeatEntry --><!-- InstanceEndRepeat -->
+</body>
+<!-- InstanceEnd --></html>
